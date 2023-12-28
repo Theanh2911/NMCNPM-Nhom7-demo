@@ -1,12 +1,12 @@
 package utility;
 
-import model.KhaiBao;
+import model.TamVang;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
 
 public class ClassTableModel4 {
-    public DefaultTableModel setTableKhaiBao(List<KhaiBao> listItem, String[] listColumn){
+    public DefaultTableModel setTableKhaiBao(List<TamVang> listItem, String[] listColumn){
         DefaultTableModel dtm = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column){
@@ -19,13 +19,13 @@ public class ClassTableModel4 {
         int rows = listItem.size();
         if (rows > 0){
             for(int i = 0; i< rows; i++){
-                KhaiBao khaiBao = listItem.get(i);
+                TamVang tamVang = listItem.get(i);
                 o = new Object[columns];
-                o[0] = khaiBao.getIDKhaiBao();
-                o[1] = khaiBao.getIDNhanKhau();
-                o[2] = khaiBao.getVungDich();
-                o[3] = khaiBao.getBieuHien();
-                o[4] = khaiBao.getNgayKhaiBao();
+                o[0] = tamVang.getIDKhaiBao();
+                o[1] = tamVang.getIDNhanKhau();
+                o[2] = tamVang.getVungDich();
+                o[3] = tamVang.getBieuHien();
+                o[4] = tamVang.getNgayKhaiBao();
                 dtm.addRow(o);
             }
         }

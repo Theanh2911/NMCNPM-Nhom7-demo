@@ -7,14 +7,14 @@ package utility;
 
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
-import model.CachLy;
+import model.TamTru;
 
 /**
  *
  * @author admin
  */
 public class ClassTableModel2 {
-    public DefaultTableModel setTableCachLy(List<CachLy> listItem, String[] listColumn){
+    public DefaultTableModel setTableCachLy(List<TamTru> listItem, String[] listColumn){
         DefaultTableModel dtm = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column){
@@ -27,15 +27,15 @@ public class ClassTableModel2 {
         int rows = listItem.size();
         if (rows > 0){
             for(int i = 0; i< rows; i++){
-                CachLy cachLy = listItem.get(i);
+                TamTru tamTru = listItem.get(i);
                 o = new Object[columns];
-                o[0] = cachLy.getIDCachLy();
-                o[1] = cachLy.getIDNhanKhau();
-                o[2] = cachLy.getHoTen();
-                o[3] = cachLy.getNoiCachLy();
-                o[4] = cachLy.getThoiGianBatDau();
-                o[5] = cachLy.getMucDoCachLy();
-                o[6] = cachLy.getDaKiemTra();
+                o[0] = tamTru.getIDCachLy();
+                o[1] = tamTru.getIDNhanKhau();
+                o[2] = tamTru.getHoTen();
+                o[3] = tamTru.getNoiCachLy();
+                o[4] = tamTru.getThoiGianBatDau();
+                o[5] = tamTru.getMucDoCachLy();
+                o[6] = tamTru.getDaKiemTra();
                 dtm.addRow(o);
             }
         }
