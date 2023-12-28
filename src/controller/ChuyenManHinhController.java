@@ -12,6 +12,8 @@ import view.HoKhauJPanel;
 import view.NhanKhauJPanel;
 import view.ThongKeJFrame;
 import view.TrangChuJPanel;
+import view.TamTruJPanel;
+import view.TamVangJPanel;
 public class ChuyenManHinhController {
 
     private JPanel root;
@@ -68,7 +70,7 @@ public class ChuyenManHinhController {
                     node = new HoKhauJPanel();
                     break;
                 case "TamTru":
-                    //node = new TamTruJPanel();
+                    node = new TamTruJPanel();
                     break;
                 case "TamVang":
                     //node = new TamVangPanel();

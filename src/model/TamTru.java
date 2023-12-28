@@ -5,9 +5,7 @@
  */
 package model;
 
-import java.util.Date;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+import java.sql.Date;
 
 /**
  *
@@ -19,14 +17,11 @@ public class TamTru {
     private int idNhanKhau;
     private String hoTen;
     private String noiTamTru;
-    private LocalDateTime thoiGianKhaiBao;
+    private Date thoiGianKhaiBao;
+    private int nguoiThucHien;
 
-    public TamTru(int idNhanKhau, String hoTen, String noiTamTru) {
-        this.idKhaiBao = ++nbKhaiBao;
-        this.idNhanKhau = idNhanKhau;
-        this.hoTen = hoTen;
-        this.noiTamTru = noiTamTru;
-        this.thoiGianKhaiBao = LocalDateTime.now(ZoneId.of("Asia/Bangkok"));
+    public void setNguoiThucHien(int nguoiThucHien) {
+        this.nguoiThucHien = nguoiThucHien;
     }
 
     public int getIdKhaiBao() {
@@ -45,8 +40,29 @@ public class TamTru {
         return noiTamTru;
     }
 
-    public LocalDateTime getThoiGianKhaiBao() {
+    public Date getThoiGianKhaiBao() {
         return thoiGianKhaiBao;
+    }
+
+
+    public void setIdKhaiBao(int idKhaiBao) {
+        this.idKhaiBao = idKhaiBao;
+    }
+
+    public void setIdNhanKhau(int idNhanKhau) {
+        this.idNhanKhau = idNhanKhau;
+    }
+
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
+    public void setNoiTamTru(String noiTamTru) {
+        this.noiTamTru = noiTamTru;
+    }
+
+    public void setThoiGianKhaiBao(Date thoiGianKhaiBao) {
+        this.thoiGianKhaiBao = thoiGianKhaiBao;
     }
 
     @Override
