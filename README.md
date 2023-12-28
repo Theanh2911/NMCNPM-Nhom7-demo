@@ -24,7 +24,7 @@ Cài đặt:
 - Mở MySQL Workbench
 - Tạo schema với tên là quanlydancu
 - Vào File -> Open SQL Script
-- Chọn file "quanlycovidsql.sql"
+- Chọn file "quanlydancu.sql"
 - Execute file trên
 
 # Quy trình làm việc
