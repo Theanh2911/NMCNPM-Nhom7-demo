@@ -19,6 +19,26 @@ public class TamVang {
         this.thoiGianKhaiBao = LocalDateTime.now(ZoneId.of("Asia/Bangkok"));
     }
 
+    public int getIdKhaiBao() {
+        return idKhaiBao;
+    }
+
+    public int getIdNhanKhau() {
+        return idNhanKhau;
+    }
+
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public String getNoiDen() {
+        return noiDen;
+    }
+
+    public LocalDateTime getThoiGianKhaiBao() {
+        return thoiGianKhaiBao;
+    }
+
     @Override
     public String toString() {
         return "TamVang{" + "idKhaiBao=" + this.idKhaiBao + ", idNhanKhau=" + this.idNhanKhau + ", hoTen=" + this.hoTen + ", thoiGianKhaiBao=" + this.thoiGianKhaiBao + '}';

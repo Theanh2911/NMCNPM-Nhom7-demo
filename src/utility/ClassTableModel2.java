@@ -14,7 +14,7 @@ import model.TamTru;
  * @author admin
  */
 public class ClassTableModel2 {
-    public DefaultTableModel setTableCachLy(List<TamTru> listItem, String[] listColumn){
+    public DefaultTableModel setTableTamTru(List<TamTru> listItem, String[] listColumn){
         DefaultTableModel dtm = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column){
@@ -29,13 +29,11 @@ public class ClassTableModel2 {
             for(int i = 0; i< rows; i++){
                 TamTru tamTru = listItem.get(i);
                 o = new Object[columns];
-                o[0] = tamTru.getIDCachLy();
-                o[1] = tamTru.getIDNhanKhau();
+                o[0] = tamTru.getIdKhaiBao();
+                o[1] = tamTru.getIdNhanKhau();
                 o[2] = tamTru.getHoTen();
-                o[3] = tamTru.getNoiCachLy();
-                o[4] = tamTru.getThoiGianBatDau();
-                o[5] = tamTru.getMucDoCachLy();
-                o[6] = tamTru.getDaKiemTra();
+                o[4] = tamTru.getNoiTamTru();
+                o[5] = tamTru.getThoiGianKhaiBao();
                 dtm.addRow(o);
             }
         }

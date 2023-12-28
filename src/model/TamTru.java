@@ -29,6 +29,26 @@ public class TamTru {
         this.thoiGianKhaiBao = LocalDateTime.now(ZoneId.of("Asia/Bangkok"));
     }
 
+    public int getIdKhaiBao() {
+        return idKhaiBao;
+    }
+
+    public int getIdNhanKhau() {
+        return idNhanKhau;
+    }
+
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public String getNoiTamTru() {
+        return noiTamTru;
+    }
+
+    public LocalDateTime getThoiGianKhaiBao() {
+        return thoiGianKhaiBao;
+    }
+
     @Override
     public String toString() {
         return "TamTru{" + "IDNhanKhau=" + this.idNhanKhau + ", HoTen=" + this.hoTen + ", NoiTamTru=" + this.noiTamTru + ", ThoiGianKhaiBao=" + this.thoiGianKhaiBao + '}';
