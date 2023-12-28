@@ -13,7 +13,7 @@ import java.sql.Date;
 public class HoKhau {
     private int ID;
     private String maHoKhau;
-    private int idChuHo;
+    private int idChuHo; 
     private String maKhuVuc;
     private String diaChi;
     private Date ngayLap;

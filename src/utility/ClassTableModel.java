@@ -8,8 +8,6 @@ package utility;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import model.NhanKhau;
-import model.KiemTra;
-import model.CachLy;
 
 /**
  *
