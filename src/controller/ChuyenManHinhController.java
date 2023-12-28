@@ -67,6 +67,12 @@ public class ChuyenManHinhController {
                 case "HoKhau":
                     node = new HoKhauJPanel();
                     break;
+                case "TamTru":
+                    //node = new TamTruJPanel();
+                    break;
+                case "TamVang":
+                    //node = new TamVangPanel();
+                    break;
                 case "ThongKe":
                     ThongKeJFrame frame = new ThongKeJFrame(root);
                     frame.setTitle("Thông Tin Cách Ly Covid");
