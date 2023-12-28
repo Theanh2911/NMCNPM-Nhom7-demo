@@ -23,7 +23,7 @@ public class MainJFrame extends javax.swing.JFrame {
         initComponents();
         setResizable(true);
          this.setLocationRelativeTo(null);
-        setTitle("Quản Lý Thông Tin Covid-19");
+        setTitle("Quản Lý DÂN CƯ");
         ChuyenManHinhController controller = new ChuyenManHinhController(jpnView);
         controller.setView(jpnTrangChu, jlbTrangChu);
         
@@ -92,7 +92,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-male-user-96.png"))); // NOI18N
-        jLabel1.setText("QUẢN LÝ COVID-19");
+        jLabel1.setText("QUẢN LÝ DÂN CƯ");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -195,6 +195,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jlbKhaiBao.setForeground(new java.awt.Color(255, 255, 255));
         jlbKhaiBao.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jlbKhaiBao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-edit-property-64.png"))); // NOI18N
+        jlbKhaiBao.setText("   Tạm trú/Tạm vắng");
 
         javax.swing.GroupLayout jpnKhaiBaoLayout = new javax.swing.GroupLayout(jpnKhaiBao);
         jpnKhaiBao.setLayout(jpnKhaiBaoLayout);
@@ -220,7 +221,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jlbKiemTra.setForeground(new java.awt.Color(255, 255, 255));
         jlbKiemTra.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jlbKiemTra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-antivirus-52.png"))); // NOI18N
-
+        jlbKiemTra.setText("   QL phát thưởng");
         javax.swing.GroupLayout jpnKiemTraLayout = new javax.swing.GroupLayout(jpnKiemTra);
         jpnKiemTra.setLayout(jpnKiemTraLayout);
         jpnKiemTraLayout.setHorizontalGroup(
@@ -245,7 +246,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jlbCachLy.setForeground(new java.awt.Color(255, 255, 255));
         jlbCachLy.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jlbCachLy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-hospital-3-64.png"))); // NOI18N
-
+        jlbCachLy.setText("   QL Thu chi");
         javax.swing.GroupLayout jpnCachLyLayout = new javax.swing.GroupLayout(jpnCachLy);
         jpnCachLy.setLayout(jpnCachLyLayout);
         jpnCachLyLayout.setHorizontalGroup(

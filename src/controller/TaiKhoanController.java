@@ -57,7 +57,7 @@ public class TaiKhoanController {
                         }else {
                             dialog.dispose();
                             MainJFrame frame = new MainJFrame();
-                            frame.setTitle("Quản Lý Thông Tin Covid");
+                            frame.setTitle("Quản Lý DÂN CƯ");
                             frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
                             frame.setVisible(true);
                         }
