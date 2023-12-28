@@ -32,7 +32,28 @@ create table taikhoan
     TinhTrang   int not null,
     VaiTro      varchar(255)      not null
 );
-
+create table tamtru
+(
+    idKhaiBao   int auto_increment
+        primary key,
+    idNhanKhau  int null,
+    FOREIGN KEY (idNhanKhau) REFERENCES nhankhau(ID),
+    hoTen     	varchar(100) null,
+    noiTamTru        varchar(100) null,
+    thoiGianKhaiBao       datetime         null,
+    nguoiThucHien int          null
+);
+create table tamvang
+(
+    idKhaiBao   int auto_increment
+        primary key,
+    idNhanKhau  int null,
+    FOREIGN KEY (idNhanKhau) REFERENCES nhankhau(ID),
+    hoTen   varchar(100) null,
+    noiDen  varchar(100) null,
+    thoiGianKhaiBao datetime null,
+    nguoiThucHien int          null
+);
 insert into taikhoan (IDTaiKhoan, TenDangNhap, MatKhau, TinhTrang, VaiTro)
 values  (1, 'QuyDuong', '123',1, 'admin'),
         (2, 'TheAnh', '123',1, 'admin'),
