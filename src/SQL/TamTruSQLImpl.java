@@ -51,15 +51,12 @@ public class TamTruSQLImpl implements TamTruSQL {
             Connection cons = DBConnect.getConnection();
             String sql = "INSERT INTO TamTru(idKhaiBao, idNhanKhau, hoTen, noiTamTru, thoiGianKhaiBao, nguoiThucHien) VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maKhaiBao = VALUES(maKhaiBao), maNhanKhau = VALUES(maNhanKhau), nguoiThucHien = VALUES(nguoiThucHien);";
             PreparedStatement ps = cons.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, hoKhau.getID());
-            ps.setString(2, hoKhau.getMaHoKhau());
-            ps.setInt(3, hoKhau.getIdChuHo());
-            ps.setString(4, hoKhau.getMaKhuVuc());
-            ps.setString(5, hoKhau.getDiaChi());
-            ps.setDate(6, (java.sql.Date) new Date(hoKhau.getNgayLap().getTime()));
-            ps.setDate(7, (java.sql.Date) new Date(hoKhau.getNgayChuyenDi().getTime()));
-            ps.setString(8, hoKhau.getLyDoChuyen());
-            ps.setInt(9, hoKhau.getNguoiThucHien());
+            ps.setInt(1, tamTru.getIdKhaiBao());
+            ps.setInt(2, tamTru.getIdNhanKhau());
+            ps.setString(3, tamTru.getHoTen());
+            ps.setString(4, tamTru.getNoiTamTru());
+            ps.setDate(5, (java.sql.Date) new Date(tamTru.getThoiGianKhaiBao().getTime()));
+            ps.setInt(6, tamTru.getNguoiThucHien());
             ps.execute();
             ResultSet rs = ps.getGeneratedKeys();
             int generatedKey = 0;
@@ -78,7 +75,7 @@ public class TamTruSQLImpl implements TamTruSQL {
     public int delete(int id) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "DELETE FROM hokhau WHERE ID = ?";
+            String sql = "DELETE FROM tamtru WHERE idKhaiBao = ?";
             PreparedStatement ps = cons.prepareStatement(sql);
             ps.setInt(1, id);
             int rowsAffected = ps.executeUpdate();
@@ -92,8 +89,8 @@ public class TamTruSQLImpl implements TamTruSQL {
     }
 
     public static void main(String[] args) {
-        HoKhauSQL hoKhauSQL = new HoKhauSQLImpl();
-        System.out.println(hoKhauSQL.getList());
+        TamTruSQL tamTruSQL = new TamTruSQLImpl();
+        System.out.println(tamTruSQL.getList());
     }
 
 }

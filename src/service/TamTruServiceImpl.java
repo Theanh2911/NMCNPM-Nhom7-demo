@@ -1,32 +1,31 @@
 package service;
 
 import SQL.TamTruSQL;
-import SQL.TamTruSqlImpl;
-import model.HoKhau;
+import SQL.TamTruSQLImpl;
+import model.TamTru;
 
 import java.util.List;
 
 public class TamTruServiceImpl implements TamTruService {
-    private TamTruSQL hoKhauSQL = null;
+    private TamTruSQL tamTruSQL = null;
 
-    public HoKhauServiceImpl() {
-        hoKhauSQL = new TamtruSQLImpl();
+    public TamTruServiceImpl() {
+        tamTruSQL = new TamTruSQLImpl();
     }
 
 
     @Override
-    public List<HoKhau> getList() {
-        return hoKhauSQL.getList();
-
+    public List<TamTru> getList() {
+        return tamTruSQL.getList();
     }
 
     @Override
-    public int createOrUpdate(HoKhau hoKhau) {
-        return hoKhauSQL.createOrUpdate(hoKhau);
+    public int createOrUpdate(TamTru tamTru) {
+        return tamTruSQL.createOrUpdate(tamTru);
 
     }
     @Override
     public int delete(int id){
-        return hoKhauSQL.delete(id);
+        return tamTruSQL.delete(id);
     }
 }

@@ -69,6 +69,8 @@ public class TamTru {
     public String toString() {
         return "TamTru{" + "IDNhanKhau=" + this.idNhanKhau + ", HoTen=" + this.hoTen + ", NoiTamTru=" + this.noiTamTru + ", ThoiGianKhaiBao=" + this.thoiGianKhaiBao + '}';
     }
-    
-    
+
+    public int getNguoiThucHien() {
+        return nguoiThucHien;
+    }
 }

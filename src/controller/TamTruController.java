@@ -25,10 +25,10 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import model.TamTru;
-import service.HoKhauService;
-import service.HoKhauServiceImpl;
+import service.TamTruService;
+import service.TamTruServiceImpl;
 import utility.ClassTableModel2;
-import view.HoKhauJFrame;
+import view.TamTruJFrame;
 
 /**
  *
@@ -38,18 +38,18 @@ public class TamTruController {
     private JPanel jpnView;
     private JButton btnAdd;
     private JTextField jtfSearch;
-    private HoKhauService hoKhauService = null;
-    private String[] listColumn = {"Id", "Mã Hộ Khẩu", "ID Chủ Hộ", "Mã Khu Vực", "Địa chỉ", "Ngày Lập", "Ngày Chuyển Đi", "Lý Do Chuyển", "Người Thực Hiện"};
+    private TamTruService tamTruService = null;
+    private String[] listColumn = {"Id", "ID Nhân khẩu", "Họ và tên", "Nơi Tạm Trú", "Ngày thực hiện", "Người Thực Hiện"};
     private TableRowSorter<TableModel> rowSorter = null;
 
     public TamTruController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
         this.jpnView = jpnView;
         this.btnAdd = btnAdd;
         this.jtfSearch = jtfSearch;
-        this.hoKhauService = new HoKhauServiceImpl();
+        this.tamTruService = new TamTruServiceImpl();
     }
     public void setDatetoTable2(){
-        List<TamTru> listItem = hoKhauService.getList();
+        List<TamTru> listItem = tamTruService.getList();
         DefaultTableModel model = new ClassTableModel2().setTableTamTru(listItem, listColumn);
         JTable table = new JTable(model);
         rowSorter = new TableRowSorter<>(table.getModel());
@@ -91,19 +91,16 @@ public class TamTruController {
                     DefaultTableModel model = (DefaultTableModel) table.getModel();
                     int selectedRowIndex = table.getSelectedRow();
                     selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
-                    HoKhau hoKhau = new HoKhau();
-                    hoKhau.setID((int) model.getValueAt(selectedRowIndex, 0));
-                    hoKhau.setMaHoKhau(model.getValueAt(selectedRowIndex, 1).toString());
-                    hoKhau.setIdChuHo((int) model.getValueAt(selectedRowIndex, 2));
-                    hoKhau.setMaKhuVuc((String) model.getValueAt(selectedRowIndex, 3));
-                    hoKhau.setDiaChi((String) model.getValueAt(selectedRowIndex, 3));
-                    hoKhau.setNgayLap((Date) model.getValueAt(selectedRowIndex, 4));
-                    hoKhau.setNgayChuyenDi((Date) model.getValueAt(selectedRowIndex, 4));
-                    hoKhau.setLyDoChuyen(model.getValueAt(selectedRowIndex, 5).toString());
-                    hoKhau.setNguoiThucHien((int) model.getValueAt(selectedRowIndex, 6));
+                    TamTru tamTru = new TamTru();
+                    tamTru.setIdKhaiBao((int) model.getValueAt(selectedRowIndex, 0));
+                    tamTru.setIdNhanKhau((int) model.getValueAt(selectedRowIndex, 1));
+                    tamTru.setHoTen((String) model.getValueAt(selectedRowIndex, 2));
+                    tamTru.setNoiTamTru((String) model.getValueAt(selectedRowIndex, 3));
+                    tamTru.setThoiGianKhaiBao((Date) model.getValueAt(selectedRowIndex, 4));
+                    tamTru.setNguoiThucHien((int) model.getValueAt(selectedRowIndex, 5));
 
-                    HoKhauJFrame frame = new HoKhauJFrame(hoKhau);
-                    frame.setTitle("Thông Tin Hộ Khẩu");
+                    tamTruJFrame frame = new tamTruJFrame(tamTru);
+                    frame.setTitle("Thông Tin Tạm Trú");
                     frame.setResizable(false);
                     frame.setLocationRelativeTo(null);
                     frame.setVisible(true);
@@ -132,7 +129,7 @@ public class TamTruController {
         btnAdd.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                HoKhauJFrame frame = new HoKhauJFrame(new HoKhau());
+                tamTruJFrame frame = new tamTruJFrame(new TamTru());
                 frame.setTitle("Khai báo tạm trú");
                 frame.setResizable(false);
                 frame.setLocationRelativeTo(null);
