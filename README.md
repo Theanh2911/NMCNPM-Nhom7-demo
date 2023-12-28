@@ -9,8 +9,8 @@
 -Mai Chiến Hữu - <br>
 
 # Tài liệu
-- [Báo cáo bài tập lớn](https://docs.google.com/document/d/1frgwEIa2ZMpp426keH1myk78rqlQ1YRgFslR3MXPqeQ/edit?usp=sharing)
-- [Slide báo cáo](https://docs.google.com/presentation/d/1lsMfM0uV95WRiQZvff8CmErXaT56-kcOVI1kctAj6ys/edit?usp=sharing)
+- [Báo cáo bài tập lớn]
+- [Slide báo cáo]
 
 # Hướng dẫn
 ## Set up môi trường
