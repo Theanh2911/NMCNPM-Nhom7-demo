@@ -99,7 +99,7 @@ public class TamTruController {
                     tamTru.setThoiGianKhaiBao((Date) model.getValueAt(selectedRowIndex, 4));
                     tamTru.setNguoiThucHien((int) model.getValueAt(selectedRowIndex, 5));
 
-                    tamTruJFrame frame = new tamTruJFrame(tamTru);
+                    TamTruJFrame frame = new TamTruJFrame(tamTru);
                     frame.setTitle("Thông Tin Tạm Trú");
                     frame.setResizable(false);
                     frame.setLocationRelativeTo(null);
