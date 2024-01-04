@@ -24,33 +24,33 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-import model.TamTru;
-import service.TamTruService;
-import service.TamTruServiceImpl;
-import utility.ClassTableModel2;
-import view.TamTruJFrame;
+import model.TamVang;
+import service.TamVangService;
+import service.TamVangServiceImpl;
+import utility.ClassTableModel4;
+import view.ThemTamVangJFrame;
 
 /**
  *
  * @author admin
  */
-public class TamTruController {
+public class ThongKeTamVangController {
     private JPanel jpnView;
     private JButton btnAdd;
     private JTextField jtfSearch;
-    private TamTruService tamTruService = null;
-    private String[] listColumn = {"Id", "ID Nhân khẩu", "Họ và tên", "Nơi Tạm Trú", "Ngày thực hiện", "Người Thực Hiện"};
+    private TamVangService tamVangService = null;
+    private String[] listColumn = {"Id", "ID Nhân khẩu", "Họ và tên", "Nơi Đến", "Ngày thực hiện", "Người Thực Hiện"};
     private TableRowSorter<TableModel> rowSorter = null;
 
-    public TamTruController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
+    public ThongKeTamVangController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
         this.jpnView = jpnView;
         this.btnAdd = btnAdd;
         this.jtfSearch = jtfSearch;
-        this.tamTruService = new TamTruServiceImpl();
+        this.tamVangService = new TamVangServiceImpl();
     }
-    public void setDatetoTable2(){
-        List<TamTru> listItem = tamTruService.getList();
-        DefaultTableModel model = new ClassTableModel2().setTableTamTru(listItem, listColumn);
+    public void setDatetoTable4(){
+        List<TamVang> listItem = tamVangService.getList();
+        DefaultTableModel model = new ClassTableModel4().setTableTamVang(listItem, listColumn);
         JTable table = new JTable(model);
         rowSorter = new TableRowSorter<>(table.getModel());
         table.setRowSorter(rowSorter);
@@ -91,16 +91,16 @@ public class TamTruController {
                     DefaultTableModel model = (DefaultTableModel) table.getModel();
                     int selectedRowIndex = table.getSelectedRow();
                     selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
-                    TamTru tamTru = new TamTru();
-                    tamTru.setIdKhaiBao((int) model.getValueAt(selectedRowIndex, 0));
-                    tamTru.setIdNhanKhau((int) model.getValueAt(selectedRowIndex, 1));
-                    tamTru.setHoTen((String) model.getValueAt(selectedRowIndex, 2));
-                    tamTru.setNoiTamTru((String) model.getValueAt(selectedRowIndex, 3));
-                    tamTru.setThoiGianKhaiBao((Date) model.getValueAt(selectedRowIndex, 4));
-                    tamTru.setNguoiThucHien((int) model.getValueAt(selectedRowIndex, 5));
+                    TamVang tamVang = new TamVang();
+                    tamVang.setIdKhaiBao((int) model.getValueAt(selectedRowIndex, 0));
+                    tamVang.setIdNhanKhau((int) model.getValueAt(selectedRowIndex, 1));
+                    tamVang.setHoTen((String) model.getValueAt(selectedRowIndex, 2));
+                    tamVang.setNoiDen((String) model.getValueAt(selectedRowIndex, 3));
+                    tamVang.setThoiGianKhaiBao((Date) model.getValueAt(selectedRowIndex, 4));
+                    tamVang.setNguoiThucHien((int) model.getValueAt(selectedRowIndex, 5));
 
-                    TamTruJFrame frame = new TamTruJFrame(tamTru);
-                    frame.setTitle("Thông Tin Tạm Trú");
+                    ThemTamVangJFrame frame = new ThemTamVangJFrame(tamVang);
+                    frame.setTitle("Thông Tin Tạm Vắng");
                     frame.setResizable(false);
                     frame.setLocationRelativeTo(null);
                     frame.setVisible(true);
@@ -129,8 +129,8 @@ public class TamTruController {
         btnAdd.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                tamTruJFrame frame = new tamTruJFrame(new TamTru());
-                frame.setTitle("Khai báo tạm trú");
+                ThemTamVangJFrame frame = new ThemTamVangJFrame(new TamVang());
+                frame.setTitle("Khai báo tạm vắng");
                 frame.setResizable(false);
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);

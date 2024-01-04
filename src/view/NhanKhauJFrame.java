@@ -110,7 +110,6 @@ public class NhanKhauJFrame extends javax.swing.JFrame {
         btnSubmit.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         btnSubmit.setForeground(new java.awt.Color(255, 255, 255));
         btnSubmit.setText("Lưu");
-        btnSubmit.setActionCommand("Lưu");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
