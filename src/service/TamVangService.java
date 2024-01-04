@@ -1,12 +1,11 @@
-package SQL;
+package service;
 
+import model.HoKhau;
 import model.TamVang;
-
 import java.util.List;
 
-public interface TamVangSQL {
+public interface TamVangService {
     public List<TamVang> getList();
     public int createOrUpdate(TamVang tamVang);
-
-    int delete(int id);
+    public int delete(int id);
 }
