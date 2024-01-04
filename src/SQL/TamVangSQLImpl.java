@@ -50,7 +50,7 @@ public class TamVangSQLImpl implements TamVangSQL {
     public int createOrUpdate(TamVang tamVang) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "INSERT INTO TamVang(idKhaiBao, idNhanKhau, hoTen, noiDen, thoiGianKhaiBao, nguoiThucHien) VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maKhaiBao = VALUES(maKhaiBao), maNhanKhau = VALUES(maNhanKhau), nguoiThucHien = VALUES(nguoiThucHien);";
+            String sql = "INSERT INTO TamVang(idKhaiBao, idNhanKhau, hoTen, noiDen, thoiGianKhaiBao, nguoiThucHien) VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE idKhaiBao = VALUES(idKhaiBao),idNhanKhau = VALUES(idNhanKhau), hoTen = VALUES(hoTen), noiDen = VALUES(noiDen),thoiGianKhaiBao = VALUES(thoiGianKhaiBao), nguoiThucHien = VALUES(nguoiThucHien);";
             PreparedStatement ps = cons.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setInt(1, tamVang.getIdKhaiBao());
             ps.setInt(2, tamVang.getIdNhanKhau());

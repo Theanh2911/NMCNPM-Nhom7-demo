@@ -33,7 +33,7 @@ public class HoKhauController {
     private HoKhauService hoKhauService = null;
     private JLabel jlbMsg;
 
-    public HoKhauController(JTextField jtfIDHoKhau, JTextField jtfIDMaHoKhau, JTextField jtfIDChuHo, JTextField jtfMaKhuVuc, JTextField jtfDiaChi, JDateChooser jdcNgayLap, JDateChooser jdcNgayChuyenDi, JTextArea jtaLyDoChuyen, JTextField jtfNguoiThucHien, JButton btnSubmit) {
+    public HoKhauController(JTextField jtfIDHoKhau, JTextField jtfIDMaHoKhau, JTextField jtfIDChuHo, JTextField jtfMaKhuVuc, JTextField jtfDiaChi, JDateChooser jdcNgayLap, JDateChooser jdcNgayChuyenDi, JTextArea jtaLyDoChuyen, JTextField jtfNguoiThucHien, JButton btnSubmit,JLabel jlbMsg) {
         this.jtfIDHoKhau = jtfIDHoKhau;
         this.jtfIDMaHoKhau = jtfIDMaHoKhau;
         this.jtfIDChuHo = jtfIDChuHo;
@@ -44,6 +44,7 @@ public class HoKhauController {
         this.jtaLyDoChuyen = jtaLyDoChuyen;
         this.jtfNguoiThucHien = jtfNguoiThucHien;
         this.btnSubmit = btnSubmit;
+        this.jlbMsg = jlbMsg;
         this.hoKhauService = new HoKhauServiceImpl();
     }
 
@@ -52,13 +53,13 @@ public class HoKhauController {
     public void setView(HoKhau hoKhau){
         this.hoKhau = hoKhau;
         jtfIDHoKhau.setText("#" + hoKhau.getID());
-        jtfIDMaHoKhau.setText("#" + hoKhau.getMaHoKhau());
-        jtfMaKhuVuc.setText("#" + hoKhau.getMaKhuVuc());
-        jtfIDChuHo.setText("#" + hoKhau.getIdChuHo());
+        jtfIDMaHoKhau.setText(String.valueOf(hoKhau.getMaHoKhau()));
+        jtfMaKhuVuc.setText(String.valueOf(hoKhau.getMaKhuVuc()));
+        jtfIDChuHo.setText(String.valueOf(hoKhau.getIdChuHo()));
         jtfDiaChi.setText(hoKhau.getDiaChi());
         jdcNgayLap.setDate(hoKhau.getNgayLap());
         jdcNgayChuyenDi.setDate(hoKhau.getNgayChuyenDi());
-        jtfNguoiThucHien.setText("#"+ hoKhau.getNguoiThucHien());
+        jtfNguoiThucHien.setText(String.valueOf(hoKhau.getNguoiThucHien()));
         jtaLyDoChuyen.setText(hoKhau.getLyDoChuyen());
     }
     public void setEvent(){

@@ -49,7 +49,7 @@ public class TamTruSQLImpl implements TamTruSQL {
     public int createOrUpdate(TamTru tamTru) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "INSERT INTO TamTru(idKhaiBao, idNhanKhau, hoTen, noiTamTru, thoiGianKhaiBao, nguoiThucHien) VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maKhaiBao = VALUES(maKhaiBao), maNhanKhau = VALUES(maNhanKhau), nguoiThucHien = VALUES(nguoiThucHien);";
+            String sql = "INSERT INTO TamTru(idKhaiBao, idNhanKhau, hoTen, noiTamTru, thoiGianKhaiBao, nguoiThucHien) VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE idKhaiBao = VALUES(idKhaiBao),idNhanKhau = VALUES(idNhanKhau), hoTen = VALUES(hoTen), noiTamTru = VALUES(noiTamTru),thoiGianKhaiBao = VALUES(thoiGianKhaiBao), nguoiThucHien = VALUES(nguoiThucHien);";
             PreparedStatement ps = cons.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setInt(1, tamTru.getIdKhaiBao());
             ps.setInt(2, tamTru.getIdNhanKhau());
