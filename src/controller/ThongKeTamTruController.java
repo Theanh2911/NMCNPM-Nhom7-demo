@@ -80,9 +80,9 @@ public class ThongKeTamTruController {
             }
         });
 
-        table.getColumnModel().getColumn(2).setMaxWidth(80);
+        /*table.getColumnModel().getColumn(2).setMaxWidth(80);
         table.getColumnModel().getColumn(2).setMinWidth(80);
-        table.getColumnModel().getColumn(2).setPreferredWidth(80);
+        table.getColumnModel().getColumn(2).setPreferredWidth(80);*/
 
         table.addMouseListener(new MouseAdapter() {
             @Override
