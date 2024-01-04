@@ -86,6 +86,9 @@
               <Color blue="e7" green="c7" red="a7" type="rgb"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="NhanKhauJFrame_jPanel2"/>
+          </AuxValues>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -335,7 +338,6 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="L&#x1b0;u"/>
-                <Property name="actionCommand" type="java.lang.String" value="L&#x1b0;u"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>

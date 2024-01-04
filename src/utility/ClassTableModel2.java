@@ -32,8 +32,9 @@ public class ClassTableModel2 {
                 o[0] = tamTru.getIdKhaiBao();
                 o[1] = tamTru.getIdNhanKhau();
                 o[2] = tamTru.getHoTen();
-                o[4] = tamTru.getNoiTamTru();
-                o[5] = tamTru.getThoiGianKhaiBao();
+                o[3] = tamTru.getNoiTamTru();
+                o[4] = tamTru.getThoiGianKhaiBao();
+                o[5] = tamTru.getNguoiThucHien();
                 dtm.addRow(o);
             }
         }

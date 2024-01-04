@@ -7,6 +7,7 @@ package view;
 import controller.HoKhauController;
 import model.HoKhau;
 
+
 /**
  *
  * @author hoang
