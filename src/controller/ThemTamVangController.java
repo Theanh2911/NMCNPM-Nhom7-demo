@@ -10,63 +10,63 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import model.TamTru;
-import service.TamTruService;
-import service.TamTruServiceImpl;
+import model.TamVang;
+import service.TamVangService;
+import service.TamVangServiceImpl;
 
 /**
  *
  * @author admin
  */
-public class ThemTamTruController {
+public class ThemTamVangController {
     private JTextField jtfIdKhaiBao;
     private JTextField jtfIdNhanKhau;
     private JTextField jtfHoTen;
-    private JTextArea jtaNoiTamTru;
+    private JTextArea jtaNoiDen;
     private JDateChooser jdcthoiGianKhaiBao;
     private JTextField jtfNguoiThucHien;
     private JButton btnSubmit;
-    private TamTru tamTru = null;
-    private TamTruService tamTruService = null;
+    private TamVang tamVang = null;
+    private TamVangService tamVangService = null;
     private JLabel jlbMsg;
 
-    public ThemTamTruController(JTextField jtfIdKhaiBao, JTextField jtfIdNhanKhau, JTextField jtfHoTen, JTextArea jtaNoiTamTru, JDateChooser jdcthoiGianKhaiBao, JTextField jtfNguoiThucHien, JButton btnSubmit, JLabel jlbMsg) {
+    public ThemTamVangController(JTextField jtfIdKhaiBao, JTextField jtfIdNhanKhau, JTextField jtfHoTen, JTextArea jtaNoiDen, JDateChooser jdcthoiGianKhaiBao, JTextField jtfNguoiThucHien, JButton btnSubmit, JLabel jlbMsg) {
         this.jtfIdKhaiBao = jtfIdKhaiBao;
         this.jtfIdNhanKhau = jtfIdNhanKhau;
         this.jtfHoTen = jtfHoTen;
-        this.jtaNoiTamTru = jtaNoiTamTru;
+        this.jtaNoiDen = jtaNoiDen;
         this.jdcthoiGianKhaiBao = jdcthoiGianKhaiBao;
         this.jtfNguoiThucHien = jtfNguoiThucHien;
         this.btnSubmit = btnSubmit;
         this.jlbMsg = jlbMsg;
-        this.tamTruService = new TamTruServiceImpl();
+        this.tamVangService = new TamVangServiceImpl();
     }
 
-    public void setView(TamTru tamTru){
-        this.tamTru = tamTru;
-        jtfIdKhaiBao.setText("#" + tamTru.getIdKhaiBao());
-        jtfIdNhanKhau.setText(String.valueOf(tamTru.getIdNhanKhau()));
-        jtfHoTen.setText(tamTru.getHoTen());
-        jtaNoiTamTru.setText(tamTru.getNoiTamTru());
-        jdcthoiGianKhaiBao.setDate(tamTru.getThoiGianKhaiBao());
-        jtfNguoiThucHien.setText(String.valueOf(tamTru.getNguoiThucHien()));
+    public void setView(TamVang tamVang){
+        this.tamVang = tamVang;
+        jtfIdKhaiBao.setText("#" + tamVang.getIdKhaiBao());
+        jtfIdNhanKhau.setText(String.valueOf(tamVang.getIdNhanKhau()));
+        jtfHoTen.setText(tamVang.getHoTen());
+        jtaNoiDen.setText(tamVang.getNoiDen());
+        jdcthoiGianKhaiBao.setDate(tamVang.getThoiGianKhaiBao());
+        jtfNguoiThucHien.setText(String.valueOf(tamVang.getNguoiThucHien()));
     }
     public void setEvent(){
         btnSubmit.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if(jtaNoiTamTru.getText().length() == 0 || jtfIdNhanKhau.getText().length() ==0){
+                if(jtaNoiDen.getText().length() == 0 || jtfIdNhanKhau.getText().length() ==0){
                     jlbMsg.setText("Vui lòng nhập dữ liệu bắt buộc");
                 }
                 else{
-                    tamTru.setNoiTamTru(jtaNoiTamTru.getText());
-                    tamTru.setThoiGianKhaiBao((java.sql.Date) new Date(jdcthoiGianKhaiBao.getDate().getTime()));
-                    tamTru.setHoTen(jtfHoTen.getText());
-                    tamTru.setIdNhanKhau(Integer.parseInt(jtfIdNhanKhau.getText()));
-                    tamTru.setNguoiThucHien(Integer.parseInt(jtfNguoiThucHien.getText()));
-                    int lastID = tamTruService.createOrUpdate(tamTru);
+                    tamVang.setNoiDen(jtaNoiDen.getText());
+                    tamVang.setThoiGianKhaiBao((java.sql.Date) new Date(jdcthoiGianKhaiBao.getDate().getTime()));
+                    tamVang.setHoTen(jtfHoTen.getText());
+                    tamVang.setIdNhanKhau(Integer.parseInt(jtfIdNhanKhau.getText()));
+                    tamVang.setNguoiThucHien(Integer.parseInt(jtfNguoiThucHien.getText()));
+                    int lastID = tamVangService.createOrUpdate(tamVang);
                     if (lastID > 0){
-//                    tamTru.setID(lastID);
+//                    tamVang.setID(lastID);
                         jtfIdKhaiBao.setText("#" + lastID);
                         jlbMsg.setText("Thêm Mới Dữ Liệu Thành Công");
                     }

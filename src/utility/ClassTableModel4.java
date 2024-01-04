@@ -26,6 +26,7 @@ public class ClassTableModel4 {
                 o[2] = tamVang.getHoTen();
                 o[3] = tamVang.getNoiDen();
                 o[4] = tamVang.getThoiGianKhaiBao();
+                o[5] = tamVang.getNguoiThucHien();
                 dtm.addRow(o);
             }
         }
