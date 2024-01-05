@@ -8,12 +8,9 @@ import java.awt.event.MouseListener;
 import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
-import view.HoKhauJPanel;
-import view.NhanKhauJPanel;
-import view.ThongKeJFrame;
-import view.TrangChuJPanel;
-import view.ThongKeTamTruJPanel;
-import view.ThongKeTamVangJPanel;
+
+import view.*;
+
 public class ChuyenManHinhController {
 
     private JPanel root;
@@ -69,8 +66,13 @@ public class ChuyenManHinhController {
                 case "HoKhau":
                     node = new HoKhauJPanel();
                     break;
-                case "TamTru":
-                    node = new ThongKeTamTruJPanel();
+                case "TamTruTamVang":
+                    TamVangTamTruJFrame frame1 = new TamVangTamTruJFrame(root);
+                    frame1.setTitle("Tạm Trú Tạm Vắng");
+                    frame1.setResizable(false);
+                    frame1.setLocationRelativeTo(null);
+                    frame1.setVisible(true);
+                    // to do: add statement and code to let user choose which type of
                     break;
                 case "TamVang":
                     node = new ThongKeTamVangJPanel();

@@ -57,8 +57,8 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jpnMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jpnView" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jpnView" min="-2" pref="775" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -91,18 +91,16 @@
                   <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jpnThongKe" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jpnKiemTra" max="32767" attributes="0"/>
-                              <Component id="jpnHoKhau" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jpnTrangChu1" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jpnTrangChu" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jpnKhaiBao" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jpnCachLy" alignment="1" max="32767" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jpnPhatThuong" max="32767" attributes="0"/>
+                          <Component id="jpnHoKhau" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jpnTrangChu1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jpnTrangChu" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jpnTamTruTamVang" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jpnQLThuPhi" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jpnThongKe" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -118,11 +116,11 @@
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Component id="jpnHoKhau" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jpnKhaiBao" min="-2" max="-2" attributes="0"/>
+                      <Component id="jpnTamTruTamVang" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="jpnKiemTra" min="-2" max="-2" attributes="0"/>
+                      <Component id="jpnPhatThuong" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="jpnCachLy" min="-2" max="-2" attributes="0"/>
+                      <Component id="jpnQLThuPhi" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jpnThongKe" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -173,7 +171,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/icons8-male-user-96.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="QU&#x1ea2;N L&#xdd; COVID-19"/>
+                    <Property name="text" type="java.lang.String" value="QU&#x1ea2;N L&#xdd; D&#xc2;N C&#x1af;"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -190,8 +188,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jlbTrangChu" min="-2" pref="258" max="-2" attributes="0"/>
-                          <EmptySpace pref="22" max="32767" attributes="0"/>
+                          <Component id="jlbTrangChu" pref="294" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -269,7 +267,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/icons8-conference-64.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="   Nh&#xe2;n kh&#x1ea9;u"/>
+                    <Property name="text" type="java.lang.String" value="  Nh&#xe2;n kh&#x1ea9;u"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -317,12 +315,12 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/icons8-home-address-64.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="   H&#x1ed9; kh&#x1ea9;u"/>
+                    <Property name="text" type="java.lang.String" value="  H&#x1ed9; kh&#x1ea9;u"/>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jpnKhaiBao">
+            <Container class="javax.swing.JPanel" name="jpnTamTruTamVang">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cb" green="b4" red="84" type="rgb"/>
@@ -334,7 +332,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jlbKhaiBao" max="32767" attributes="0"/>
+                          <Component id="jlbTamTruTamVang" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -343,14 +341,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jlbKhaiBao" max="32767" attributes="0"/>
+                          <Component id="jlbTamTruTamVang" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jlbKhaiBao">
+                <Component class="javax.swing.JLabel" name="jlbTamTruTamVang">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cb" green="b4" red="84" type="rgb"/>
@@ -365,11 +363,12 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/icons8-edit-property-64.png"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value=" T&#x1ea1;m tr&#xfa;/T&#x1ea1;m v&#x1eaf;ng"/>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jpnKiemTra">
+            <Container class="javax.swing.JPanel" name="jpnPhatThuong">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cb" green="b4" red="84" type="rgb"/>
@@ -381,8 +380,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jlbKiemTra" min="-2" pref="266" max="-2" attributes="0"/>
-                          <EmptySpace pref="17" max="32767" attributes="0"/>
+                          <Component id="jlbPhatThuong" min="-2" pref="266" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -390,14 +389,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jlbKiemTra" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlbPhatThuong" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jlbKiemTra">
+                <Component class="javax.swing.JLabel" name="jlbPhatThuong">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cb" green="b4" red="84" type="rgb"/>
@@ -412,11 +411,12 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/icons8-antivirus-52.png"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="   Ph&#xe1;t th&#x1b0;&#x1edf;ng"/>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jpnCachLy">
+            <Container class="javax.swing.JPanel" name="jpnQLThuPhi">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cb" green="b4" red="84" type="rgb"/>
@@ -428,7 +428,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jlbCachLy" min="-2" pref="252" max="-2" attributes="0"/>
+                          <Component id="jlbQLThuPhi" min="-2" pref="252" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -437,13 +437,13 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jlbCachLy" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlbQLThuPhi" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jlbCachLy">
+                <Component class="javax.swing.JLabel" name="jlbQLThuPhi">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cb" green="b4" red="84" type="rgb"/>
@@ -458,6 +458,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/icons8-hospital-3-64.png"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value=" QL Thu ph&#xed;"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -475,7 +476,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jlbThongKe" min="-2" pref="232" max="-2" attributes="0"/>
-                          <EmptySpace pref="51" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -501,7 +502,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/icons8-bar-chart-64.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="  Th&#x1ed1;ng k&#xea;"/>
+                    <Property name="text" type="java.lang.String" value=" Th&#x1ed1;ng k&#xea;"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
                 </Component>
@@ -522,7 +523,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="760" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="775" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
