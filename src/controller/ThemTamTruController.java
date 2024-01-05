@@ -69,6 +69,7 @@ public class ThemTamTruController {
 //                    tamTru.setID(lastID);
                         jtfIdKhaiBao.setText("#" + lastID);
                         jlbMsg.setText("Thêm Mới Dữ Liệu Thành Công");
+
                     }
                 }
             }

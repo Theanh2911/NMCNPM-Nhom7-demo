@@ -7,6 +7,8 @@ package view;
 import controller.ThemTamVangController;
 import model.TamVang;
 
+import javax.swing.*;
+
 /**
  *
  * @author apple
@@ -51,7 +53,7 @@ public class ThemTamVangJFrame extends javax.swing.JFrame {
         jtfHoTen = new javax.swing.JTextField();
         jlbMsg = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(167, 199, 231));
 
