@@ -1,6 +1,6 @@
 package utility;
 
-import model.TamVang;
+import model.TamTruTamVang.TamVang;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.List;

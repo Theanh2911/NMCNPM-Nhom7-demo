@@ -7,7 +7,7 @@ package utility;
 
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
-import model.TamTru;
+import model.TamTruTamVang.TamTru;
 
 /**
  *
@@ -39,7 +39,6 @@ public class ClassTableModel2 {
             }
         }
         return dtm;
-        
     }
     
 }

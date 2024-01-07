@@ -1,7 +1,7 @@
 
 package SQL;
 import java.util.List;
-import model.NhanKhau;
+import model.QLHoKhauNhanKhau.NhanKhau;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.sql.PreparedStatement;

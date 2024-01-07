@@ -54,6 +54,7 @@ create table tamvang
     thoiGianKhaiBao datetime null,
     nguoiThucHien int          null
 );
+
 insert into taikhoan (IDTaiKhoan, TenDangNhap, MatKhau, TinhTrang, VaiTro)
 values  (1, 'QuyDuong', '123',1, 'admin'),
         (2, 'TheAnh', '123',1, 'admin'),

@@ -1,7 +1,6 @@
 package service;
 
-import model.HoKhau;
-import model.TamTru;
+import model.TamTruTamVang.TamTru;
 import java.util.List;
 
 public interface TamTruService {

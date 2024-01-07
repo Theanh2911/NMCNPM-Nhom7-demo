@@ -1,5 +1,11 @@
 package controller;
 
+import view.ThuPhiDongGop.QLThuPhiDongGopJFrame;
+import view.TrangChu.TrangChuJPanel;
+import view.ThongKe.ThongKeJFrame;
+import view.TamTruTamVang.TamVangTamTruJFrame;
+import view.QLHoKhauNhanKhau.NhanKhauJPanel;
+import view.QLHoKhauNhanKhau.HoKhauJPanel;
 import bean.DanhMucBean;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -9,7 +15,6 @@ import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 
-import view.*;
 
 public class ChuyenManHinhController {
 
@@ -73,6 +78,13 @@ public class ChuyenManHinhController {
                     frame1.setLocationRelativeTo(null);
                     frame1.setVisible(true);
                     // to do: add statement and code to let user choose which type of
+                    break;
+                case "QLThuPhi":
+                    QLThuPhiDongGopJFrame frame2 = new QLThuPhiDongGopJFrame(root);
+                    frame2.setTitle("Tạm Trú Tạm Vắng");
+                    frame2.setResizable(false);
+                    frame2.setLocationRelativeTo(null);
+                    frame2.setVisible(true);
                     break;
                 case "ThongKe":
                     ThongKeJFrame frame = new ThongKeJFrame(root);

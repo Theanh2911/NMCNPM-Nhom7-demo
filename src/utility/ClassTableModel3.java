@@ -2,7 +2,7 @@ package utility;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
-import model.HoKhau;
+import model.QLHoKhauNhanKhau.HoKhau;
 
 public class ClassTableModel3 {
     public DefaultTableModel setTableHoKhau(List<HoKhau> listItem, String[] listColumn){

@@ -2,8 +2,8 @@ package main;
 
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import view.DangNhapJDialog;
-import view.MainJFrame;
+import view.DangNhap.DangNhapJDialog;
+import view.TrangChu.MainJFrame;
 public class Main {
     public static void main(String[] args) {
         //new MainJFrame().setVisible(true);

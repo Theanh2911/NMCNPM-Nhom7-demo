@@ -8,7 +8,7 @@ package service;
 import SQL.HoKhauSQL;
 import SQL.HoKhauSQLImpl;
 import java.util.List;
-import model.HoKhau;
+import model.QLHoKhauNhanKhau.HoKhau;
 
 /**
  *

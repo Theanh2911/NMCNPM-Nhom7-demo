@@ -1,6 +1,6 @@
 package SQL;
 
-import model.TamVang;
+import model.TamTruTamVang.TamVang;
 
 import java.util.List;
 
