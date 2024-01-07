@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/QuanLyCoVid.iml" filepath="$PROJECT_DIR$/QuanLyCoVid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuanLyDanCu.iml" filepath="$PROJECT_DIR$/QuanLyDanCu.iml" />
     </modules>
   </component>
 </project>

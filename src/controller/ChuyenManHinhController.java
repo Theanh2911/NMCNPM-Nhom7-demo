@@ -74,9 +74,6 @@ public class ChuyenManHinhController {
                     frame1.setVisible(true);
                     // to do: add statement and code to let user choose which type of
                     break;
-                case "TamVang":
-                    node = new ThongKeTamVangJPanel();
-                    break;
                 case "ThongKe":
                     ThongKeJFrame frame = new ThongKeJFrame(root);
                     frame.setTitle("Thông Tin Cách Ly Covid");

@@ -23,7 +23,7 @@ public class TamTruTamVangController {
     }
 
     public void setEvent(JPanel root){
-        btnThongKeTamTru.addMouseListener(new MouseAdapter() {
+        btnThongKeTamVang.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 chosenThongKe = "ThongKeTamVang";
