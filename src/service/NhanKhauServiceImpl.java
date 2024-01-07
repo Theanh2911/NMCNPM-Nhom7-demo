@@ -4,7 +4,7 @@ package service;
 import SQL.NhanKhauSQL;
 import SQL.NhanKhauSQLImpl;
 import java.util.List;
-import model.NhanKhau;
+import model.QLHoKhauNhanKhau.NhanKhau;
 
 /**
  *

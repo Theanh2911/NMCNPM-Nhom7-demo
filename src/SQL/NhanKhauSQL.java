@@ -6,7 +6,7 @@
 package SQL;
 
 import java.util.List;
-import model.NhanKhau;
+import model.QLHoKhauNhanKhau.NhanKhau;
 
 /**
  *

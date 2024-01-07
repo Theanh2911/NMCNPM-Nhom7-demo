@@ -6,7 +6,7 @@
 package service;
 
 import java.util.List;
-import model.HoKhau;
+import model.QLHoKhauNhanKhau.HoKhau;
 
 /**
  *
