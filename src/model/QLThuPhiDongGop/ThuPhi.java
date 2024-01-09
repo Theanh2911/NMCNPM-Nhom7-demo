@@ -3,15 +3,15 @@ package model.QLThuPhiDongGop;
 import java.sql.Date;
 
 public class ThuPhi {
+    private int maHoaDon;
     private int maKhoanThu;
     private int maNguoiNop;
-    private String hoTen;
-    private int maHo;
-    private String tenKhoanThu;
-    private int soTien;
-    private boolean daDong;
     private Date ngayDong;
-    private int nguoiThu;
+    private int maNguoiThu;
+
+    public int getMaHoaDon() {
+        return maHoaDon;
+    }
 
     public int getMaKhoanThu() {
         return maKhoanThu;
@@ -21,32 +21,16 @@ public class ThuPhi {
         return maNguoiNop;
     }
 
-    public String getHoTen() {
-        return hoTen;
-    }
-
-    public int getMaHo() {
-        return maHo;
-    }
-
-    public String getTenKhoanThu() {
-        return tenKhoanThu;
-    }
-
-    public int getSoTien() {
-        return soTien;
-    }
-
-    public boolean isDaDong() {
-        return daDong;
-    }
-
     public Date getNgayDong() {
         return ngayDong;
     }
 
-    public int getNguoiThu() {
-        return nguoiThu;
+    public int getMaNguoiThu() {
+        return maNguoiThu;
+    }
+
+    public void setMaHoaDon(int maHoaDon) {
+        this.maHoaDon = maHoaDon;
     }
 
     public void setMaKhoanThu(int maKhoanThu) {
@@ -57,31 +41,11 @@ public class ThuPhi {
         this.maNguoiNop = maNguoiNop;
     }
 
-    public void setHoTen(String hoTen) {
-        this.hoTen = hoTen;
-    }
-
-    public void setMaHo(int maHo) {
-        this.maHo = maHo;
-    }
-
-    public void setTenKhoanThu(String tenKhoanThu) {
-        this.tenKhoanThu = tenKhoanThu;
-    }
-
-    public void setSoTien(int soTien) {
-        this.soTien = soTien;
-    }
-
-    public void setDaDong(boolean daDong) {
-        this.daDong = daDong;
-    }
-
-    public void setNgayDong(Date ngayDong) {
+    public void setNgayDongGop(Date ngayDongGop) {
         this.ngayDong = ngayDong;
     }
 
     public void setNguoiThu(int nguoiThu) {
-        this.nguoiThu = nguoiThu;
+        this.maNguoiThu = maNguoiThu;
     }
 }

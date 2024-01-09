@@ -1,7 +1,7 @@
 package service;
 
-import SQL.TamVangSQL;
-import SQL.TamVangSQLImpl;
+import SQL.TamTruTamVang.TamVangSQL;
+import SQL.TamTruTamVang.TamVangSQLImpl;
 import model.TamTruTamVang.TamVang;
 
 import java.util.List;

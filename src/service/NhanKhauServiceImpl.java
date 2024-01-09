@@ -1,8 +1,8 @@
 
 package service;
 
-import SQL.NhanKhauSQL;
-import SQL.NhanKhauSQLImpl;
+import SQL.QLHoKhauNhanKhau.NhanKhauSQL;
+import SQL.QLHoKhauNhanKhau.NhanKhauSQLImpl;
 import java.util.List;
 import model.QLHoKhauNhanKhau.NhanKhau;
 

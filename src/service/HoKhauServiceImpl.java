@@ -5,8 +5,8 @@
  */
 package service;
 
-import SQL.HoKhauSQL;
-import SQL.HoKhauSQLImpl;
+import SQL.QLHoKhauNhanKhau.HoKhauSQL;
+import SQL.QLHoKhauNhanKhau.HoKhauSQLImpl;
 import java.util.List;
 import model.QLHoKhauNhanKhau.HoKhau;
 
