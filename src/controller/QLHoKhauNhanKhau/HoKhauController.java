@@ -11,8 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import model.QLHoKhauNhanKhau.HoKhau;
-import service.HoKhauService;
-import service.HoKhauServiceImpl;
+import service.HoKhauNhanKhau.HoKhauService;
+import service.HoKhauNhanKhau.HoKhauServiceImpl;
 
 /**
  *
