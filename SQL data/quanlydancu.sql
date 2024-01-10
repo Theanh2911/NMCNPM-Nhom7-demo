@@ -111,15 +111,6 @@ values  (1, '1', 28, '1', '777 Pham Van Dong Street', '1995-02-12', null, null, 
         (9, '9', 16, '1', '333 Le Loi Street', '1991-12-03', null, null, null),
         (10, '10', 25, '3', '222 Ly Tu Trong Street, Haiphong', '2019-08-14', null, null, null);
 
-insert into tamtru (idKhaiBao, idNhanKhau, hoTen, noiTamTru, thoiGianKhaiBao, nguoiThucHien)
-values (1, 1, 'Nguyen Minh', '283 Khuong Trung', null, null),
-       (2,2,'Tran Thi Mai', '198 Cau Giay',null, null);
-
-insert into tamvang (idKhaiBao, idNhanKhau, hoTen, noiDen, thoiGianKhaiBao, nguoiThucHien)
-values (1, 3, 'Pham Van Anh', '283 Khuong Trung', null, null),
-       (2,4,'Le Duc Khanh', '198 Cau Giay',null, null);
-
-
 insert into nhankhau (ID, HoTen, NgaySinh, GioiTinh, DiaChi, NoiSinh)
 values  (1, 'Nguyen Minh', '1990-06-15', 'Nam', '123 Tran Hung Dao Street, Hanoi', 'Hanoi'),
         (2, 'Tran Thi Mai', '1985-09-28', 'Nữ', '456 Le Loi Avenue, Ho Chi Minh City', 'Ho Chi Minh'),
@@ -153,4 +144,12 @@ values  (1, 'Nguyen Minh', '1990-06-15', 'Nam', '123 Tran Hung Dao Street, Hanoi
         (30, 'Bui Van Anh', '1996-08-28', 'Nam', '999 Tran Hung Dao Boulevard, Hai Phong', 'Hai Phong'),
         (31, 'Hoang Thi Lan', '1991-03-02', 'Nữ', '555 Nguyen Van Cu Avenue, Can Tho', 'Can Tho'),
         (32, 'Do Van Nam', '1987-07-09', 'Nam', '111 Le Lai Street, Vinh', 'Vinh');
+
+insert into tamtru (idKhaiBao, idNhanKhau, hoTen, noiTamTru, thoiGianKhaiBao, nguoiThucHien)
+values (1, 1, 'Nguyen Minh', '283 Khuong Trung', null, null),
+       (2,2,'Tran Thi Mai', '198 Cau Giay',null, null);
+
+insert into tamvang (idKhaiBao, idNhanKhau, hoTen, noiDen, thoiGianKhaiBao, nguoiThucHien)
+values (1, 3, 'Pham Van Anh', '283 Khuong Trung', null, null),
+       (2,4,'Le Duc Khanh', '198 Cau Giay',null, null);
 
