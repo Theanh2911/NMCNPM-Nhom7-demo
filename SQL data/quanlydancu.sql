@@ -153,3 +153,71 @@ insert into tamvang (idKhaiBao, idNhanKhau, hoTen, noiDen, thoiGianKhaiBao, nguo
 values (1, 3, 'Pham Van Anh', '283 Khuong Trung', null, null),
        (2,4,'Le Duc Khanh', '198 Cau Giay',null, null);
 
+
+CREATE TABLE thuongle (
+    maPhatThuong INT NOT NULL,
+    idPhanThuong INT NOT NULL,
+    ngayNhan DATE NOT NULL,
+    idNguoiPhat INT NOT NULL,
+    idNguoiNhan INT NOT NULL,
+    PRIMARY KEY (maPhatThuong),
+    FOREIGN KEY (idPhanThuong) REFERENCES phanthuongle (idPhanThuong),
+    FOREIGN KEY (idNguoiNhan) REFERENCES nhankhau (ID)
+);
+
+create table phanthuongle (
+    idPhanThuong INT NOT NULL,
+    tenPhanThuong VARCHAR(255) NOT NULL,
+    giaTri INT NOT NULL,
+    PRIMARY KEY (idPhanThuong)
+);
+
+create table thuonghoctap(
+    maPhatThuong INT NOT NULL,
+    idPhanThuong INT NOT NULL,
+    idNguoiNhan INT NOT NULL,
+    ngayNhan DATE NOT NULL,
+    idNguoiPhat INT NOT NULL,
+    PRIMARY KEY (maPhatThuong),
+    FOREIGN KEY (idPhanThuong) REFERENCES phanthuonghoctap (idPhanThuong),
+    FOREIGN KEY (idNguoiNhan) REFERENCES nhankhau (ID)
+);
+
+create table phanthuonghoctap(
+    idPhanThuong INT NOT NULL,
+    loaiPhanThuong VARCHAR(255) NOT NULL,
+    giaTri INT NOT NULL,
+    PRIMARY KEY (idPhanThuong)
+);
+
+INSERT INTO thuonghoctap (maPhatThuong, idPhanThuong, ngayNhan, idNguoiPhat, idNguoiNhan)
+VALUES
+    (1, 2, '2023-12-25', 1, 8),
+    (2, 2, '2023-12-25', 1, 17),
+    (3, 2, '2023-12-25', 1, 3),
+    (4, 1, '2023-12-24', 1, 12),
+    (5, 2, '2023-12-25', 1, 5),
+    (6, 2, '2023-12-25', 2, 19),
+    (7, 2, '2023-12-25', 2, 10),
+    (8, 1, '2023-12-24', 1, 12),
+    (9, 2, '2023-12-25', 1, 14),
+    (10, 1, '2023-12-25', 2, 6),
+    (11, 2, '2023-12-25', 2, 11),
+    (12, 1, '2023-12-24', 2, 18);
+
+INSERT INTO phanthuonghoctap(idPhanThuong, loaiPhanThuong, giaTri)
+VALUES
+    (1,'Phần thưởng cho học sinh giỏi',100000),
+    (2,'Phần thưởng cho học sinh tiên tiến',50000);
+
+INSERT INTO thuongle(maPhatThuong, idPhanThuong, ngayNhan, idNguoiPhat, idNguoiNhan)
+VALUES
+    (1,1,'2024-02-05',1,9);
+
+INSERT INTO phanthuongle(idPhanThuong, tenPhanThuong, giaTri)
+VALUES
+    (1,'Thưởng người tốt việc tốt',30000),
+    (2,'Thưởng cho các cháu thiếu nhi 1/6',50000);
+
+
+
