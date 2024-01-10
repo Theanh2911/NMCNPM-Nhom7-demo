@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package service;
+package service.HoKhauNhanKhau;
 
 import SQL.QLHoKhauNhanKhau.HoKhauSQL;
 import SQL.QLHoKhauNhanKhau.HoKhauSQLImpl;
 import java.util.List;
 import model.QLHoKhauNhanKhau.HoKhau;
+import service.HoKhauNhanKhau.HoKhauService;
 
 /**
  *
  * @author admin
  */
-public class HoKhauServiceImpl implements HoKhauService{
+public class HoKhauServiceImpl implements HoKhauService {
     private HoKhauSQL hoKhauSQL = null;
 
     public HoKhauServiceImpl() {

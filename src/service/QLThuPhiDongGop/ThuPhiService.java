@@ -1,4 +1,4 @@
-package service;
+package service.QLThuPhiDongGop;
 
 import model.QLThuPhiDongGop.ThuPhi;
 

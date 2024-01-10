@@ -1,8 +1,9 @@
-package service;
+package service.QLThuPhiDongGop;
 
 import SQL.QLThuPhiDongGop.ThuPhiSQL;
 import SQL.QLThuPhiDongGop.ThuPhiSQLImpl;
 import model.QLThuPhiDongGop.ThuPhi;
+import service.QLThuPhiDongGop.ThuPhiService;
 
 import java.util.List;
 

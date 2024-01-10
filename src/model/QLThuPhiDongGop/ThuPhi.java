@@ -41,11 +41,11 @@ public class ThuPhi {
         this.maNguoiNop = maNguoiNop;
     }
 
-    public void setNgayDongGop(Date ngayDongGop) {
+    public void setNgayDongGop(Date ngayDong) {
         this.ngayDong = ngayDong;
     }
 
-    public void setNguoiThu(int nguoiThu) {
+    public void setMaNguoiThu(int maNguoiThu) {
         this.maNguoiThu = maNguoiThu;
     }
 }

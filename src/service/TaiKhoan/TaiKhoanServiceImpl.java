@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package service;
+package service.TaiKhoan;
 
 import SQL.TaiKhoan.TaiKhoanSQL;
 import SQL.TaiKhoan.TaiKhoanSQLImpl;
 import model.TaiKhoan;
+import service.TaiKhoan.TaiKhoanService;
 
 /**
  *
  * @author admin
  */
-public class TaiKhoanServiceImpl implements TaiKhoanService{
+public class TaiKhoanServiceImpl implements TaiKhoanService {
     private TaiKhoanSQL taiKhoanSQL = null;
     public TaiKhoanServiceImpl(){
         taiKhoanSQL = new TaiKhoanSQLImpl();

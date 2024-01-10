@@ -1,16 +1,17 @@
 
-package service;
+package service.HoKhauNhanKhau;
 
 import SQL.QLHoKhauNhanKhau.NhanKhauSQL;
 import SQL.QLHoKhauNhanKhau.NhanKhauSQLImpl;
 import java.util.List;
 import model.QLHoKhauNhanKhau.NhanKhau;
+import service.HoKhauNhanKhau.NhanKhauService;
 
 /**
  *
  * @author admin
  */
-public class NhanKhauServiceImpl implements NhanKhauService{
+public class NhanKhauServiceImpl implements NhanKhauService {
     private NhanKhauSQL nhanKhauSQL = null;
 
     public NhanKhauServiceImpl() {

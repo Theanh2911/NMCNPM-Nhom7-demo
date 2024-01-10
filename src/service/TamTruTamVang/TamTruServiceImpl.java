@@ -1,8 +1,9 @@
-package service;
+package service.TamTruTamVang;
 
 import SQL.TamTruTamVang.TamTruSQL;
 import SQL.TamTruTamVang.TamTruSQLImpl;
 import model.TamTruTamVang.TamTru;
+import service.TamTruTamVang.TamTruService;
 
 import java.util.List;
 

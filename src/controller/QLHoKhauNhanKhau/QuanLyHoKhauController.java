@@ -25,8 +25,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import model.QLHoKhauNhanKhau.HoKhau;
-import service.HoKhauService;
-import service.HoKhauServiceImpl;
+import service.HoKhauNhanKhau.HoKhauService;
+import service.HoKhauNhanKhau.HoKhauServiceImpl;
 import utility.ClassTableModel3;
 import view.QLHoKhauNhanKhau.HoKhauJFrame;
 

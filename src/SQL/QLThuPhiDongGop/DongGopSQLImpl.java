@@ -9,30 +9,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 import SQL.DBConnect;
-import model.QLThuPhiDongGop.ThuPhi;
+import model.QLThuPhiDongGop.DongGop;
 
 /**
  *
  * @author admin
  */
 
-public class ThuPhiSQLImpl implements ThuPhiSQL {
+public class DongGopSQLImpl implements DongGopSQL {
     @Override
-    public List<ThuPhi> getList() {
+    public List<DongGop> getList() {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "SELECT * FROM thuphi";
-            List<ThuPhi> list = new ArrayList<>();
+            String sql = "SELECT * FROM donggop";
+            List<DongGop> list = new ArrayList<>();
             PreparedStatement ps = cons.prepareCall(sql);
             ResultSet rs = ps.executeQuery();
             while(rs.next()) {
-                ThuPhi thuPhi = new ThuPhi();
-                thuPhi.setMaHoaDon(rs.getInt("maHoaDon"));
-                thuPhi.setMaKhoanThu(rs.getInt("maKhoanThu"));
-                thuPhi.setMaNguoiNop(rs.getInt("maNguoiNop"));
-                thuPhi.setNgayDongGop(rs.getDate("ngayDong"));
-                thuPhi.setMaNguoiThu(rs.getInt("maNguoiThu"));
-                list.add(thuPhi);
+                DongGop dongGop = new DongGop();
+                dongGop.setMaHoaDon(rs.getInt("maHoaDon"));
+                dongGop.setMaKhoanDongGop(rs.getInt("maKhoanDongGop"));
+                dongGop.setMaNguoiDongGop(rs.getInt("maNguoiDongGop"));
+                dongGop.setSoTien(rs.getInt("soTien"));
+                dongGop.setNgayDongGop(rs.getDate("ngayDong"));
+                dongGop.setMaNguoiThu(rs.getInt("maNguoiThu"));
+                list.add(dongGop);
             }
             ps.close();
             rs.close();
@@ -46,16 +47,16 @@ public class ThuPhiSQLImpl implements ThuPhiSQL {
     }
 
     @Override
-    public int createOrUpdate(ThuPhi thuPhi) {
+    public int createOrUpdate(DongGop dongGop) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "INSERT INTO ThuPhi(maHoaDon, maKhoanThu, maNguoiNop, ngayDong, maNguoiThu) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanThu = VALUES(maKhoanThu), maNguoiNop = VALUES(maNguoiNop),ngayDong = VALUES(ngayDong), maNguoiDong = VALUES(maNguoiDong);";
+            String sql = "INSERT INTO DongGop(maHoaDon, maKhoanThu, maNguoiNop, ngayDong, maNguoiThu) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanThu = VALUES(maKhoanThu), maNguoiNop = VALUES(maNguoiNop),ngayDong = VALUES(ngayDong), maNguoiDong = VALUES(maNguoiDong);";
             PreparedStatement ps = cons.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, thuPhi.getMaHoaDon());
-            ps.setInt(2, thuPhi.getMaKhoanThu());
-            ps.setInt(3, thuPhi.getMaNguoiNop());
-            ps.setDate(4, (java.sql.Date) new Date(thuPhi.getNgayDong().getTime()));
-            ps.setInt(5, thuPhi.getMaNguoiThu());
+            ps.setInt(1, dongGop.getMaHoaDon());
+            ps.setInt(2, dongGop.getMaKhoanThu());
+            ps.setInt(3, dongGop.getMaNguoiNop());
+            ps.setDate(4, (java.sql.Date) new Date(dongGop.getNgayDong().getTime()));
+            ps.setInt(5, dongGop.getMaNguoiThu());
             ps.execute();
             ResultSet rs = ps.getGeneratedKeys();
             int generatedKey = 0;
@@ -74,7 +75,7 @@ public class ThuPhiSQLImpl implements ThuPhiSQL {
     public int delete(int id) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "DELETE FROM thuphi WHERE maHoaDon = ?";
+            String sql = "DELETE FROM donggop WHERE maHoaDon = ?";
             PreparedStatement ps = cons.prepareStatement(sql);
             ps.setInt(1, id);
             int rowsAffected = ps.executeUpdate();
@@ -88,8 +89,8 @@ public class ThuPhiSQLImpl implements ThuPhiSQL {
     }
 
     public static void main(String[] args) {
-        ThuPhiSQL thuPhiSQL = new ThuPhiSQLImpl();
-        System.out.println(thuPhiSQL.getList());
+        DongGopSQL dongGopSQL = new DongGopSQLImpl();
+        System.out.println(dongGopSQL.getList());
     }
 
 }

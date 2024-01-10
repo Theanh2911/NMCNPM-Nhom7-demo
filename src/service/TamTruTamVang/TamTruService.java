@@ -1,4 +1,4 @@
-package service;
+package service.TamTruTamVang;
 
 import model.TamTruTamVang.TamTru;
 import java.util.List;
