@@ -32,7 +32,7 @@ public class ThongKePhatThuongLeController {
     private JButton btnAdd;
     private JTextField jtfSearch;
     private PhatThuongLeService phatThuongLeService = null;
-    private String[] listColumn = {"Mã phát thưởng", "Mã phần thưởng", "Mã người nhận", "Người nhận", "Ngày phát thưởng"};
+    private String[] listColumn = {"Mã phát thưởng", "Mã phần thưởng","Tên phần thưởng", "Mã người nhận","Giá Trị", "Ngày phát thưởng"};
     private TableRowSorter<TableModel> rowSorter = null;
 
     public ThongKePhatThuongLeController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
@@ -88,8 +88,7 @@ public class ThongKePhatThuongLeController {
                     phatThuongLe.setMaPhatThuong((int) model.getValueAt(selectedRowIndex, 0));
                     phatThuongLe.setMaPhanThuong((int) model.getValueAt(selectedRowIndex, 1));
                     phatThuongLe.setMaNguoiNhan((int) model.getValueAt(selectedRowIndex, 2));
-                    phatThuongLe.setNguoiNhan((String) model.getValueAt(selectedRowIndex, 3));
-                    phatThuongLe.setNgayNhan((Date) model.getValueAt(selectedRowIndex, 4));
+                    phatThuongLe.setNgayNhan((Date) model.getValueAt(selectedRowIndex, 3));
 
                     ThemPhatThuongLeJFrame frame = new ThemPhatThuongLeJFrame(phatThuongLe);
                     frame.setTitle("Thông Tin Tạm Trú");

@@ -93,14 +93,14 @@ public class QuanLyHoKhauController {
                     selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
                     HoKhau hoKhau = new HoKhau();
                     hoKhau.setID((int) model.getValueAt(selectedRowIndex, 0));
-                    hoKhau.setMaHoKhau(model.getValueAt(selectedRowIndex, 1).toString());
+                    hoKhau.setMaHoKhau((String)model.getValueAt(selectedRowIndex, 1));
                     hoKhau.setIdChuHo((int) model.getValueAt(selectedRowIndex, 2));
                     hoKhau.setMaKhuVuc((String) model.getValueAt(selectedRowIndex, 3));
-                    hoKhau.setDiaChi((String) model.getValueAt(selectedRowIndex, 3));
-                    hoKhau.setNgayLap((Date) model.getValueAt(selectedRowIndex, 4));
-                    hoKhau.setNgayChuyenDi((Date) model.getValueAt(selectedRowIndex, 4));
-                    hoKhau.setLyDoChuyen(model.getValueAt(selectedRowIndex, 5).toString());
-                    hoKhau.setNguoiThucHien((int) model.getValueAt(selectedRowIndex, 6));
+                    hoKhau.setDiaChi((String) model.getValueAt(selectedRowIndex, 4));
+                    hoKhau.setNgayLap((Date) model.getValueAt(selectedRowIndex, 5));
+                    hoKhau.setNgayChuyenDi((Date) model.getValueAt(selectedRowIndex, 6));
+                    hoKhau.setLyDoChuyen((String)model.getValueAt(selectedRowIndex, 7));
+                    hoKhau.setNguoiThucHien((int) model.getValueAt(selectedRowIndex, 8));
                     
                     HoKhauJFrame frame = new HoKhauJFrame(hoKhau);
                     frame.setTitle("Thông Tin Hộ Khẩu");

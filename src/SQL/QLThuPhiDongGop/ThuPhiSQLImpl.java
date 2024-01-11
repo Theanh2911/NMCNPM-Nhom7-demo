@@ -21,7 +21,7 @@ public class ThuPhiSQLImpl implements ThuPhiSQL {
     public List<ThuPhi> getList() {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "SELECT * FROM thuphi";
+            String sql = "SELECT * FROM thuphi LEFT JOIN khoanthuphi on thuphi.maKhoanThu = khoanthuphi.maKhoanThu";
             List<ThuPhi> list = new ArrayList<>();
             PreparedStatement ps = cons.prepareCall(sql);
             ResultSet rs = ps.executeQuery();
@@ -29,7 +29,9 @@ public class ThuPhiSQLImpl implements ThuPhiSQL {
                 ThuPhi thuPhi = new ThuPhi();
                 thuPhi.setMaHoaDon(rs.getInt("maHoaDon"));
                 thuPhi.setMaKhoanThu(rs.getInt("maKhoanThu"));
+                thuPhi.setTenKhoanThu("tenKhoanThu");
                 thuPhi.setMaNguoiNop(rs.getInt("maNguoiNop"));
+                thuPhi.setSoTien(rs.getInt("soTien"));
                 thuPhi.setNgayDong(rs.getDate("ngayDong"));
                 thuPhi.setMaNguoiThu(rs.getInt("maNguoiThu"));
                 list.add(thuPhi);
@@ -49,7 +51,7 @@ public class ThuPhiSQLImpl implements ThuPhiSQL {
     public int createOrUpdate(ThuPhi thuPhi) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "INSERT INTO ThuPhi(maHoaDon, maKhoanThu, maNguoiNop, ngayDong, maNguoiThu) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanThu = VALUES(maKhoanThu), maNguoiNop = VALUES(maNguoiNop),ngayDong = VALUES(ngayDong), maNguoiThu = VALUES(maNguoiThu);";
+            String sql = "INSERT INTO thuphi (maHoaDon, maKhoanThu, maNguoiNop, ngayDong, maNguoiThu) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanThu = VALUES(maKhoanThu), maNguoiNop = VALUES(maNguoiNop),ngayDong = VALUES(ngayDong), maNguoiThu = VALUES(maNguoiThu);";
             PreparedStatement ps = cons.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setInt(1, thuPhi.getMaHoaDon());
             ps.setInt(2, thuPhi.getMaKhoanThu());

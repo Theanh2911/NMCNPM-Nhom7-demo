@@ -18,23 +18,20 @@ import java.sql.Date;
  */
 public class ThemPhatThuongLeController {
     private JTextField jtfMaPhatThuong;
-    private JTextField jtfTenPhanThuong;
-    private JTextField jtfGiatri;
+    private JTextField jtfMaPhanThuong;
+    private JTextField jtfGiaTri;
     private JTextField jtfMaNguoiNhan;
-    private JTextField jtfNguoiNhan;
     private JDateChooser jdcNgayNhan;
-//    private JTextField jtfNguoiThucHien;
+    //    private JTextField jtfNguoiThucHien;
     private JButton btnSubmit;
     private PhatThuongLe phatThuongLe = null;
     private PhatThuongLeService phatThuongLeService = null;
     private JLabel jlbMsg;
 
-    public ThemPhatThuongLeController(JTextField jtfMaPhatThuong, JTextField jtfTenPhanThuong, JTextField jtfMaNguoiNhan, JTextField jtfNguoiNhan,JTextField jtfGiaTri, JDateChooser jdcNgayNhan, JButton btnSubmit, JLabel jlbMsg) {
+    public ThemPhatThuongLeController(JTextField jtfMaPhatThuong,JTextField jtfMaPhanThuong,JTextField jtfMaNguoiNhan, JDateChooser jdcNgayNhan, JButton btnSubmit, JLabel jlbMsg) {
         this.jtfMaPhatThuong = jtfMaPhatThuong;
-        this.jtfTenPhanThuong = jtfTenPhanThuong;
+        this.jtfMaPhanThuong = jtfMaPhanThuong;
         this.jtfMaNguoiNhan = jtfMaNguoiNhan;
-        this.jtfNguoiNhan = jtfNguoiNhan;
-        this.jtfGiatri = jtfGiaTri;
         this.jdcNgayNhan = jdcNgayNhan;
         this.btnSubmit = btnSubmit;
         this.jlbMsg = jlbMsg;
@@ -43,11 +40,9 @@ public class ThemPhatThuongLeController {
 
     public void setView(PhatThuongLe phatThuongLe){
         this.phatThuongLe = phatThuongLe;
-        jtfMaPhatThuong.setText("#" + phatThuongLe.getMaPhatThuong());
-        jtfTenPhanThuong.setText(phatThuongLe.getTenPhanThuong());
+        jtfMaPhatThuong.setText(String.valueOf(phatThuongLe.getMaPhatThuong()));
+        jtfMaPhanThuong.setText(String.valueOf(phatThuongLe.getMaPhanThuong()));
         jtfMaNguoiNhan.setText(String.valueOf(phatThuongLe.getMaNguoiNhan()));
-        jtfNguoiNhan.setText(phatThuongLe.getNguoiNhan());
-        jtfGiatri.setText(String.valueOf(phatThuongLe.getGiaTri()));
         jdcNgayNhan.setDate(phatThuongLe.getNgayNhan());
     }
     public void setEvent(){
@@ -59,16 +54,15 @@ public class ThemPhatThuongLeController {
                 }
                 else{
                     phatThuongLe.setMaPhatThuong(Integer.parseInt(jtfMaPhatThuong.getText()));
-                    phatThuongLe.setTenPhanThuong(jtfTenPhanThuong.getText());
+                    phatThuongLe.setMaPhanThuong(Integer.parseInt(jtfMaPhanThuong.getText()));
                     phatThuongLe.setMaNguoiNhan(Integer.parseInt(jtfMaNguoiNhan.getText()));
-                    phatThuongLe.setNguoiNhan(jtfNguoiNhan.getText());
-                    phatThuongLe.setGiaTri(Integer.parseInt(jtfGiatri.getText()));
                     phatThuongLe.setNgayNhan((Date) new Date(jdcNgayNhan.getDate().getTime()));
                     int lastID = phatThuongLeService.createOrUpdate(phatThuongLe);
                     if (lastID > 0){
 //                    tamTru.setID(lastID);
                         jtfMaPhatThuong.setText("#" + lastID);
                         jlbMsg.setText("Thêm Mới Dữ Liệu Thành Công");
+
                     }
                 }
             }
