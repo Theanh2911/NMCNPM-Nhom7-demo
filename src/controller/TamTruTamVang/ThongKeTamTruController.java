@@ -25,8 +25,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import model.TamTruTamVang.TamTru;
-import service.TamTruService;
-import service.TamTruServiceImpl;
+import service.TamTruTamVang.TamTruService;
+import service.TamTruTamVang.TamTruServiceImpl;
 import utility.ClassTableModel2;
 import view.TamTruTamVang.ThemTamTruJFrame;
 

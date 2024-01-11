@@ -89,7 +89,7 @@ public class ChuyenManHinhController {
                     break;
                 case "QLThuPhi":
                     QLThuPhiDongGopJFrame frame2 = new QLThuPhiDongGopJFrame(root);
-                    frame2.setTitle("Tạm Trú Tạm Vắng");
+                    frame2.setTitle("QLThuPhi");
                     frame2.setResizable(false);
                     frame2.setLocationRelativeTo(null);
                     frame2.setVisible(true);

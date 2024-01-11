@@ -11,8 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import model.TamTruTamVang.TamTru;
-import service.TamTruService;
-import service.TamTruServiceImpl;
+import service.TamTruTamVang.TamTruService;
+import service.TamTruTamVang.TamTruServiceImpl;
 
 /**
  *

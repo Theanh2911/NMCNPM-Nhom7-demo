@@ -25,14 +25,14 @@ public class ClassThuPhiTableModel {
                     ThuPhi thuPhi = listItem.get(i);
                     o = new Object[columns];
                     o[0] = thuPhi.getMaKhoanThu();
-                    o[1] = thuPhi.getHoTen();
-                    o[2] = thuPhi.getMaNguoiNop();
-                    o[3] = thuPhi.getMaHo();
-                    o[4] = thuPhi.getTenKhoanThu();
-                    o[5] = thuPhi.getSoTien();
-                    o[6] = thuPhi.isDaDong();
-                    o[7] = thuPhi.getNgayDong();
-                    o[8] = thuPhi.getNguoiThu();
+//                    o[1] = thuPhi.getHoTen();
+//                    o[2] = thuPhi.getMaNguoiNop();
+//                    o[3] = thuPhi.getMaHo();
+//                    o[4] = thuPhi.getTenKhoanThu();
+//                    o[5] = thuPhi.getSoTien();
+//                    o[6] = thuPhi.isDaDong();
+//                    o[7] = thuPhi.getNgayDong();
+//                    o[8] = thuPhi.getNguoiThu();
                     dtm.addRow(o);
                 }
             }

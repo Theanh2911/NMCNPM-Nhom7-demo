@@ -3,34 +3,30 @@ package model.QLThuPhiDongGop;
 import java.sql.Date;
 
 public class DongGop {
-    private int maKhoanThu;
+    private int maHoaDon;
+    private int maKhoanDongGop;
+    private String tenKhoanDongGop;
     private int maNguoiDongGop;
-    private int maHo;
-    private String hoTen;
-    private String khoanDongGop;
+    private String tenNguoiDongGop;
     private int soTien;
     private Date ngayDongGop;
-    private int nguoiThu;
+    private int maNguoiThu;
 
-    public int getMaKhoanThu() {
-        return maKhoanThu;
+    public int getMaHoaDon() {
+        return maHoaDon;
+    }
+
+    public int getMaKhoanDongGop() {
+        return maKhoanDongGop;
+    }
+    public String getTenKhoanDongGop() {
+        return tenKhoanDongGop;
     }
 
     public int getMaNguoiDongGop() {
         return maNguoiDongGop;
     }
 
-    public int getMaHo() {
-        return maHo;
-    }
-
-    public String getHoTen() {
-        return hoTen;
-    }
-
-    public String getKhoanDongGop() {
-        return khoanDongGop;
-    }
 
     public int getSoTien() {
         return soTien;
@@ -40,28 +36,25 @@ public class DongGop {
         return ngayDongGop;
     }
 
-    public int getNguoiThu() {
-        return nguoiThu;
+    public int getMaNguoiThu() {
+        return maNguoiThu;
+    }
+    public String getTenNguoiDongGop(){return tenNguoiDongGop;}
+
+
+    public void setMaHoaDon(int maHoaDon) {
+        this.maHoaDon = maHoaDon;
     }
 
-    public void setMaKhoanThu(int maKhoanThu) {
-        this.maKhoanThu = maKhoanThu;
+    public void setMaKhoanDongGop(int maKhoanDongGop) {
+        this.maKhoanDongGop = maKhoanDongGop;
+    }
+    public void setTenKhoanDongGop(String tenKhoanDongGop) {
+        this.tenKhoanDongGop = tenKhoanDongGop;
     }
 
     public void setMaNguoiDongGop(int maNguoiDongGop) {
         this.maNguoiDongGop = maNguoiDongGop;
-    }
-
-    public void setMaHo(int maHo) {
-        this.maHo = maHo;
-    }
-
-    public void setHoTen(String hoTen) {
-        this.hoTen = hoTen;
-    }
-
-    public void setKhoanDongGop(String khoanDongGop) {
-        this.khoanDongGop = khoanDongGop;
     }
 
     public void setSoTien(int soTien) {
@@ -72,7 +65,8 @@ public class DongGop {
         this.ngayDongGop = ngayDongGop;
     }
 
-    public void setNguoiThu(int nguoiThu) {
-        this.nguoiThu = nguoiThu;
+    public void setMaNguoiThu(int maNguoiThu) {
+        this.maNguoiThu = maNguoiThu;
     }
+    public void setTenNguoiDongGop(String tenNguoiDongGop){this.tenNguoiDongGop = tenNguoiDongGop;}
 }
