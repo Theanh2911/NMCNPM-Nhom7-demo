@@ -3,6 +3,8 @@
     <CLASSES>
       <root url="file://$USER_HOME$/Downloads/JavaPlugin/jcalendar-1.4/lib" />
       <root url="jar://$USER_HOME$/Downloads/JavaPlugin/mysql-connector-j-8.2.0/mysql-connector-j-8.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jcalendar-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mysql-connector-j-8.2.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

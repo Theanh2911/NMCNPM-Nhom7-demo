@@ -1,5 +1,6 @@
 package controller;
 
+import view.PhatThuong.PhatThuongJFrame;
 import view.ThuPhiDongGop.QLThuPhiDongGopJFrame;
 import view.TrangChu.TrangChuJPanel;
 import view.ThongKe.ThongKeJFrame;
@@ -78,6 +79,13 @@ public class ChuyenManHinhController {
                     frame1.setLocationRelativeTo(null);
                     frame1.setVisible(true);
                     // to do: add statement and code to let user choose which type of
+                    break;
+                case "PhatThuong":
+                    PhatThuongJFrame frame3 = new PhatThuongJFrame(root);
+                    frame3.setTitle("Quản lý phát thưởng");
+                    frame3.setResizable(false);
+                    frame3.setLocationRelativeTo(null);
+                    frame3.setVisible(true);
                     break;
                 case "QLThuPhi":
                     QLThuPhiDongGopJFrame frame2 = new QLThuPhiDongGopJFrame(root);
