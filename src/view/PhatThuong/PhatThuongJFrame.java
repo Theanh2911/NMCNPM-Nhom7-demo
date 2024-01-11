@@ -5,7 +5,7 @@
 package view.PhatThuong;
 
 import view.TamTruTamVang.*;
-import controller.TamTruTamVang.TamTruTamVangController;
+import controller.PhatThuong.PhatThuongController;
 import javax.swing.JPanel;
 
 /**
@@ -20,7 +20,7 @@ public class PhatThuongJFrame extends javax.swing.JFrame {
     public PhatThuongJFrame(JPanel root) {
 
         initComponents();
-        TamTruTamVangController controller = new TamTruTamVangController(btnThongKePhatThuongHocTap, btnThongKePhatThuongLe);
+        PhatThuongController controller = new PhatThuongController(btnThongKePhatThuongHocTap, btnThongKePhatThuongLe);
         controller.setEvent(root);
     }
 

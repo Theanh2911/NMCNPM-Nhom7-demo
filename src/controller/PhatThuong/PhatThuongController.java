@@ -26,7 +26,7 @@ public class PhatThuongController {
         btnThongKePhatThuongHocTap.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                chosenThongKe = "ThongKeTamVang";
+                chosenThongKe = "ThongKePhatThuongHocTap";
                 root.removeAll();
                 root.setLayout(new BorderLayout());
                 root.add(new ThongKePhatThuongHocTapJPanel());
@@ -38,7 +38,7 @@ public class PhatThuongController {
         btnThongKePhatThuongLe.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                chosenThongKe = "ThongKeTamTru";
+                chosenThongKe = "ThongKePhatThuongLe";
                 root.removeAll();
                 root.setLayout(new BorderLayout());
                 root.add(new ThongKePhatThuongLeJPanel());

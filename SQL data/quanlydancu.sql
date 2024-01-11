@@ -89,6 +89,40 @@ create table donggop
     maNguoiThu int null
 );
 
+create table phanthuonghoctap
+(
+    maPhanThuong int auto_increment primary key,
+    tenPhanThuong nvarchar(100) null,
+    giaTri int null
+);
+create table phatthuonghoctap
+(
+    maPhatThuong int auto_increment primary key,
+    maPhanThuong int not null ,
+    FOREIGN KEY (maPhanThuong) REFERENCES phanthuonghoctap(maPhanThuong),
+    maNguoiNhan int not null,
+    FOREIGN KEY (maNguoiNhan) REFERENCES nhankhau(ID),
+    nguoiNhan nvarchar(100) null,
+    ngayNhan date null
+);
+
+create table phanthuongle
+(
+    maPhanThuong int auto_increment primary key,
+    tenPhanThuong nvarchar(100) null,
+    giaTri int null
+);
+create table phatthuongle
+(
+    maPhatThuong int auto_increment primary key,
+    maPhanThuong int not null ,
+    FOREIGN KEY (maPhanThuong) REFERENCES phanthuonghoctap(maPhanThuong),
+    maNguoiNhan int not null,
+    FOREIGN KEY (maNguoiNhan) REFERENCES nhankhau(ID),
+    nguoiNhan nvarchar(100) null,
+    ngayNhan date null
+);
+
 insert into taikhoan (IDTaiKhoan, TenDangNhap, MatKhau, TinhTrang, VaiTro)
 values  (1, 'QuyDuong', '123',1, 'admin'),
         (2, 'TheAnh', '123',1, 'admin'),
