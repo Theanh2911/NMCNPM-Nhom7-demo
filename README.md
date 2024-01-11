@@ -3,10 +3,10 @@
 ...
 
 # Danh sách thành viên
--Nguyễn Hữu Mạnh - <br>
+-Nguyễn Hữu Mạnh - 20205213<br>
 -Nguyễn Thế Anh - 20205199<br>
--Nguyễn Lê Quý Dương - <br>
--Mai Chiến Hữu - <br>
+-Nguyễn Lê Quý Dương - 20210242<br>
+-Mai Chiến Hữu - 20205280<br>
 
 # Tài liệu
 - [Báo cáo bài tập lớn]
