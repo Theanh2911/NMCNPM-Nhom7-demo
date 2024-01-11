@@ -32,7 +32,7 @@ public class ThongKePhatThuongHocTapController {
     private JButton btnAdd;
     private JTextField jtfSearch;
     private PhatThuongHocTapService phatThuongHocTapService = null;
-    private String[] listColumn = {"Mã phát thưởng", "Mã phần thưởng", "Mã người nhận", "Người nhận", "Ngày phát thưởng"};
+    private String[] listColumn = {"Mã phát thưởng", "Mã phần thưởng","Tên phần thưởng", "Mã người nhận","Giá Trị", "Ngày phát thưởng"};
     private TableRowSorter<TableModel> rowSorter = null;
 
     public ThongKePhatThuongHocTapController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
@@ -88,8 +88,7 @@ public class ThongKePhatThuongHocTapController {
                     phatThuongHocTap.setMaPhatThuong((int) model.getValueAt(selectedRowIndex, 0));
                     phatThuongHocTap.setMaPhanThuong((int) model.getValueAt(selectedRowIndex, 1));
                     phatThuongHocTap.setMaNguoiNhan((int) model.getValueAt(selectedRowIndex, 2));
-                    phatThuongHocTap.setNguoiNhan((String) model.getValueAt(selectedRowIndex, 3));
-                    phatThuongHocTap.setNgayNhan((Date) model.getValueAt(selectedRowIndex, 4));
+                    phatThuongHocTap.setNgayNhan((Date) model.getValueAt(selectedRowIndex, 3));
 
                     ThemPhatThuongHocTapJFrame frame = new ThemPhatThuongHocTapJFrame(phatThuongHocTap);
                     frame.setTitle("Thông Tin Tạm Trú");

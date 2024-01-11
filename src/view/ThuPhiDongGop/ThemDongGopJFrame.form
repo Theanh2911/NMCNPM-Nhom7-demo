@@ -106,22 +106,20 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jLabel1" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jLabel2" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jLabel1" alignment="1" pref="121" max="32767" attributes="0"/>
                                       <Component id="jLabel4" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel6" min="-2" pref="123" max="-2" attributes="0"/>
                                   <Component id="jLabel9" min="-2" pref="123" max="-2" attributes="0"/>
                                   <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="20" max="32767" attributes="0"/>
+                              <EmptySpace pref="16" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jtfTenNguoiDongGop" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
                                   <Component id="jtfMaHoaDon" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
                                   <Component id="jtfMaNguoiDongGop" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
                                   <Component id="jtfMaNguoiThu" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
                                   <Component id="jtfSoTien" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
-                                  <Component id="jtfTenKhoanDongGop" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
+                                  <Component id="jtfMaKhoanDongGop" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
@@ -141,12 +139,7 @@
                           <Component id="jLabel1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jtfMaHoaDon" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jtfTenNguoiDongGop" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel6" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jtfMaNguoiDongGop" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -154,7 +147,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jtfTenKhoanDongGop" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfMaKhoanDongGop" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -173,7 +166,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                       <Component id="btnSubmit" min="-2" pref="42" max="-2" attributes="0"/>
-                      <EmptySpace pref="39" max="32767" attributes="0"/>
+                      <EmptySpace pref="83" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -189,18 +182,6 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="text" type="java.lang.String" value="Id &#x111;&#xf3;ng g&#xf3;p:"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Open Sans" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i &#x111;&#xf3;ng: "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
@@ -236,17 +217,10 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="CCCD: "/>
+                <Property name="text" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i &#x111;&#xf3;ng: "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfMaHoaDon">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Arial" size="16" style="0"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jtfTenNguoiDongGop">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
@@ -301,10 +275,10 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="Kho&#x1ea3;n &#x111;&#xf3;ng g&#xf3;p:"/>
+                <Property name="text" type="java.lang.String" value="M&#xe3; d&#x1ecb;p &#x111;&#xf3;ng g&#xf3;p:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtfTenKhoanDongGop">
+            <Component class="javax.swing.JTextField" name="jtfMaKhoanDongGop">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>

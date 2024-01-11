@@ -32,9 +32,10 @@ public class ClassTableModelPhatThuongHocTap {
                 o = new Object[columns];
                 o[0] = phatThuongHocTap.getMaPhatThuong();
                 o[1] = phatThuongHocTap.getMaPhanThuong();
-                o[2] = phatThuongHocTap.getMaNguoiNhan();
-                o[3] = phatThuongHocTap.getGiaTri();
-                o[4] = phatThuongHocTap.getNgayNhan();
+                o[2] = phatThuongHocTap.getTenPhanThuong();
+                o[3] = phatThuongHocTap.getMaNguoiNhan();
+                o[4] = phatThuongHocTap.getGiaTri();
+                o[5] = phatThuongHocTap.getNgayNhan();
                 dtm.addRow(o);
             }
         }

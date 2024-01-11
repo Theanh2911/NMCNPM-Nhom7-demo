@@ -256,5 +256,16 @@ VALUES
 INSERT INTO khoanthuphi (maKhoanThu, tenKhoanThu, soTien)
 VALUES (1, 'Phí vệ sinh',6000);
 
+insert into khoandonggop(maKhoanDongGop,tenKhoanDongGop)
+values(1,'Ủng hộ trẻ em vùng cao 2023'),
+      (2,'Quỹ từ thiện tình thương 2023');
+insert into phanthuonghoctap(maPhanThuong,tenPhanThuong,giaTri)
+values(1,'Thưởng học sinh xuất sắc',100000),
+      (2,'Thưởng học sinh giỏi',50000),
+      (3,'Thưởng học sinh khá',30000);
+insert into phanthuongle(maPhanThuong,tenPhanThuong,giaTri)
+values(1,'Thưởng Tết Nguyên Đán',50000),
+      (2,'Thưởng Tết Thiếu nhi 1-6',50000),
+      (3,'Thưởng Trung Thu',30000);
 
 

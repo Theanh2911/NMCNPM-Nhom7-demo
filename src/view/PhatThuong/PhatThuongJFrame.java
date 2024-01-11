@@ -39,7 +39,7 @@ public class PhatThuongJFrame extends javax.swing.JFrame {
         btnThongKePhatThuongHocTap = new javax.swing.JButton();
         btnThongKePhatThuongLe = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(167, 199, 231));
 

@@ -18,10 +18,9 @@ import java.sql.Date;
  */
 public class ThemPhatThuongHocTapController {
     private JTextField jtfMaPhatThuong;
-    private JTextField jtfTenPhanThuong;
+    private JTextField jtfMaPhanThuong;
     private JTextField jtfGiaTri;
     private JTextField jtfMaNguoiNhan;
-    private JTextField jtfNguoiNhan;
     private JDateChooser jdcNgayNhan;
 //    private JTextField jtfNguoiThucHien;
     private JButton btnSubmit;
@@ -29,12 +28,10 @@ public class ThemPhatThuongHocTapController {
     private PhatThuongHocTapService phatThuongHocTapService = null;
     private JLabel jlbMsg;
 
-    public ThemPhatThuongHocTapController(JTextField jtfMaPhatThuong, JTextField jtfTenPhanThuong, JTextField jtfGiaTri, JTextField jtfMaNguoiNhan, JTextField jtfNguoiNhan, JDateChooser jdcNgayNhan, JButton btnSubmit, JLabel jlbMsg) {
+    public ThemPhatThuongHocTapController(JTextField jtfMaPhatThuong,JTextField jtfMaPhanThuong,JTextField jtfMaNguoiNhan, JDateChooser jdcNgayNhan, JButton btnSubmit, JLabel jlbMsg) {
         this.jtfMaPhatThuong = jtfMaPhatThuong;
-        this.jtfTenPhanThuong = jtfTenPhanThuong;
-        this.jtfGiaTri = jtfGiaTri;
+        this.jtfMaPhanThuong = jtfMaPhanThuong;
         this.jtfMaNguoiNhan = jtfMaNguoiNhan;
-        this.jtfNguoiNhan = jtfNguoiNhan;
         this.jdcNgayNhan = jdcNgayNhan;
         this.btnSubmit = btnSubmit;
         this.jlbMsg = jlbMsg;
@@ -43,11 +40,9 @@ public class ThemPhatThuongHocTapController {
 
     public void setView(PhatThuongHocTap phatThuongHocTap){
         this.phatThuongHocTap = phatThuongHocTap;
-        jtfMaPhatThuong.setText("#" + phatThuongHocTap.getMaPhatThuong());
-        jtfTenPhanThuong.setText(phatThuongHocTap.getTenPhanThuong());
-        jtfGiaTri.setText(String.valueOf(phatThuongHocTap.getGiaTri()));
+        jtfMaPhatThuong.setText(String.valueOf(phatThuongHocTap.getMaPhatThuong()));
+        jtfMaPhanThuong.setText(String.valueOf(phatThuongHocTap.getMaPhanThuong()));
         jtfMaNguoiNhan.setText(String.valueOf(phatThuongHocTap.getMaNguoiNhan()));
-        jtfNguoiNhan.setText(phatThuongHocTap.getNguoiNhan());
         jdcNgayNhan.setDate(phatThuongHocTap.getNgayNhan());
     }
     public void setEvent(){
@@ -59,10 +54,8 @@ public class ThemPhatThuongHocTapController {
                 }
                 else{
                     phatThuongHocTap.setMaPhatThuong(Integer.parseInt(jtfMaPhatThuong.getText()));
-                    phatThuongHocTap.setTenPhanThuong(jtfTenPhanThuong.getText());
-                    phatThuongHocTap.setGiaTri(Integer.parseInt(jtfGiaTri.getText()));
+                    phatThuongHocTap.setMaPhanThuong(Integer.parseInt(jtfMaPhanThuong.getText()));
                     phatThuongHocTap.setMaNguoiNhan(Integer.parseInt(jtfMaNguoiNhan.getText()));
-                    phatThuongHocTap.setNguoiNhan(jtfNguoiNhan.getText());
                     phatThuongHocTap.setNgayNhan((Date) new Date(jdcNgayNhan.getDate().getTime()));
                     int lastID = phatThuongHocTapService.createOrUpdate(phatThuongHocTap);
                     if (lastID > 0){

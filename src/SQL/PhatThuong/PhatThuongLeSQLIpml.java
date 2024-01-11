@@ -15,7 +15,7 @@ public class PhatThuongLeSQLIpml implements PhatThuongLeSQL {
     public List<PhatThuongLe> getList() {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "SELECT * FROM phatthuongle";
+            String sql = "SELECT * FROM phatthuongle left join phanthuongle on phatthuongle.maPhanThuong = phanthuongle.maPhanThuong";
             List<PhatThuongLe> list = new ArrayList<>();
             PreparedStatement ps = cons.prepareCall(sql);
             ResultSet rs = ps.executeQuery();
@@ -23,8 +23,9 @@ public class PhatThuongLeSQLIpml implements PhatThuongLeSQL {
                 PhatThuongLe phatThuongLe = new PhatThuongLe();
                 phatThuongLe.setMaPhatThuong(rs.getInt("maPhatThuong"));
                 phatThuongLe.setMaPhanThuong(rs.getInt("maPhanThuong"));
+                phatThuongLe.setTenPhanThuong(rs.getString("tenPhanThuong"));
+                phatThuongLe.setGiaTri(rs.getInt("giaTri"));
                 phatThuongLe.setMaNguoiNhan(rs.getInt("maNguoiNhan"));
-                phatThuongLe.setNguoiNhan(rs.getString("nguoiNhan"));
                 phatThuongLe.setNgayNhan(rs.getDate("ngayNhan"));
 
                 list.add(phatThuongLe);
@@ -43,13 +44,12 @@ public class PhatThuongLeSQLIpml implements PhatThuongLeSQL {
     public int createOrUpdate(PhatThuongLe phatThuongLe) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "INSERT INTO PhatThuongLe(maPhatThuong, maPhanThuong, maNguoiNhan, nguoiNhan, ngayNhan) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maPhatThuong = VALUES(maPhatThuong), maPhanThuong = VALUES(maPhanThuong), maNguoiNhan = VALUES(maNguoiNhan), nguoiNhan = VALUES(nguoiNhan), ngayNhan = VALUES(ngayNhan);";
+            String sql = "INSERT INTO PhatThuongLe(maPhatThuong, maPhanThuong, maNguoiNhan, ngayNhan) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE maPhatThuong = VALUES(maPhatThuong), maPhanThuong = VALUES(maPhanThuong), maNguoiNhan = VALUES(maNguoiNhan), ngayNhan = VALUES(ngayNhan);";
             PreparedStatement ps = cons.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setInt(1, phatThuongLe.getMaPhatThuong());
             ps.setInt(2, phatThuongLe.getMaPhanThuong());
             ps.setInt(3, phatThuongLe.getMaNguoiNhan());
-            ps.setString(4, phatThuongLe.getNguoiNhan());
-            ps.setDate(5, phatThuongLe.getNgayNhan());
+            ps.setDate(4, phatThuongLe.getNgayNhan());
             ps.execute();
             ResultSet rs = ps.getGeneratedKeys();
             int generatedKey = 0;

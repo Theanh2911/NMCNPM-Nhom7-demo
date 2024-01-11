@@ -32,9 +32,10 @@ public class ClassTableModelPhatThuongLe {
                 o = new Object[columns];
                 o[0] = phatThuongLe.getMaPhatThuong();
                 o[1] = phatThuongLe.getMaPhanThuong();
-                o[2] = phatThuongLe.getMaNguoiNhan();
-                o[3] = phatThuongLe.getGiaTri();
-                o[4] = phatThuongLe.getNgayNhan();
+                o[2] = phatThuongLe.getTenPhanThuong();
+                o[3] = phatThuongLe.getMaNguoiNhan();
+                o[4] = phatThuongLe.getGiaTri();
+                o[5] = phatThuongLe.getNgayNhan();
                 dtm.addRow(o);
             }
         }

@@ -50,13 +50,14 @@ public class DongGopSQLImpl implements DongGopSQL {
     public int createOrUpdate(DongGop dongGop) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "INSERT INTO DongGop(maHoaDon, maKhoanDongGop, maNguoiDongGop, soTien, ngayDongGop, maNguoiThu) VALUES(?, ?, ?, ?, ?,?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanDongGop = VALUES(maKhoanDongGop), maNguoiDongGop = VALUES(maNguoiDongGop), soTien = VALUES(soTien), ngayDong = VALUES(ngayDongGop), maNguoiThu = VALUES(maNguoiThu);";
+            String sql = "INSERT INTO DongGop(maHoaDon, maKhoanDongGop, maNguoiDongGop, soTien, ngayDongGop, maNguoiThu) VALUES(?, ?, ?, ?, ?,?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanDongGop = VALUES(maKhoanDongGop), maNguoiDongGop = VALUES(maNguoiDongGop), soTien = VALUES(soTien), ngayDongGop = VALUES(ngayDongGop), maNguoiThu = VALUES(maNguoiThu);";
             PreparedStatement ps = cons.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setInt(1, dongGop.getMaHoaDon());
             ps.setInt(2, dongGop.getMaKhoanDongGop());
             ps.setInt(3, dongGop.getMaNguoiDongGop());
-            ps.setDate(4, (java.sql.Date) new Date(dongGop.getNgayDongGop().getTime()));
-            ps.setInt(5, dongGop.getMaNguoiThu());
+            ps.setInt(4, dongGop.getSoTien());
+            ps.setDate(5, (java.sql.Date) new Date(dongGop.getNgayDongGop().getTime()));
+            ps.setInt(6, dongGop.getMaNguoiThu());
             ps.execute();
             ResultSet rs = ps.getGeneratedKeys();
             int generatedKey = 0;

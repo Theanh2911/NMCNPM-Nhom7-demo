@@ -19,7 +19,7 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
     public ThemDongGopJFrame(DongGop dongGop) {
 
         initComponents();
-        ThemDongGopController controller = new ThemDongGopController(jtfMaHoaDon,jtfTenNguoiDongGop,jtfMaNguoiDongGop,jtfTenKhoanDongGop,jtfSoTien,jdcNgayDongGop,jtfMaNguoiThu,btnSubmit, jlbMsg);
+        ThemDongGopController controller = new ThemDongGopController(jtfMaHoaDon,jtfMaNguoiDongGop,jtfMaKhoanDongGop,jtfSoTien,jdcNgayDongGop,jtfMaNguoiThu,btnSubmit, jlbMsg);
         System.err.println("worked");
         controller.setView(dongGop);
         controller.setEvent();
@@ -37,23 +37,21 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jtfMaHoaDon = new javax.swing.JTextField();
-        jtfTenNguoiDongGop = new javax.swing.JTextField();
         jdcNgayDongGop = new com.toedter.calendar.JDateChooser();
         jtfMaNguoiThu = new javax.swing.JTextField();
         btnSubmit = new javax.swing.JButton();
         jtfMaNguoiDongGop = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jtfTenKhoanDongGop = new javax.swing.JTextField();
+        jtfMaKhoanDongGop = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jtfSoTien = new javax.swing.JTextField();
         jlbMsg = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(167, 199, 231));
 
@@ -65,11 +63,6 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setText("Id đóng góp:");
-
-        jLabel2.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText("Người đóng: ");
 
         jLabel3.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -84,11 +77,9 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel6.setText("CCCD: ");
+        jLabel6.setText("Người đóng: ");
 
         jtfMaHoaDon.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-
-        jtfTenNguoiDongGop.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         jdcNgayDongGop.setDateFormatString("dd-MM-yyyy");
         jdcNgayDongGop.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -110,9 +101,9 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel8.setText("Khoản đóng góp:");
+        jLabel8.setText("Mã dịp đóng góp:");
 
-        jtfTenKhoanDongGop.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        jtfMaKhoanDongGop.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -135,20 +126,18 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtfTenNguoiDongGop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfMaHoaDon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfMaNguoiDongGop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfMaNguoiThu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfSoTien, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtfTenKhoanDongGop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jtfMaKhoanDongGop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -163,16 +152,12 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
                     .addComponent(jtfMaHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfTenNguoiDongGop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfMaNguoiDongGop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfTenKhoanDongGop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfMaKhoanDongGop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -187,7 +172,7 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
                     .addComponent(jtfMaNguoiThu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(52, 52, 52)
                 .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         jlbMsg.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -243,7 +228,6 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSubmit;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
@@ -254,10 +238,9 @@ public class ThemDongGopJFrame extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jdcNgayDongGop;
     private javax.swing.JLabel jlbMsg;
     private javax.swing.JTextField jtfMaHoaDon;
+    private javax.swing.JTextField jtfMaKhoanDongGop;
     private javax.swing.JTextField jtfMaNguoiDongGop;
     private javax.swing.JTextField jtfMaNguoiThu;
     private javax.swing.JTextField jtfSoTien;
-    private javax.swing.JTextField jtfTenKhoanDongGop;
-    private javax.swing.JTextField jtfTenNguoiDongGop;
     // End of variables declaration//GEN-END:variables
 }

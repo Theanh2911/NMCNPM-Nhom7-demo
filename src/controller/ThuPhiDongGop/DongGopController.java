@@ -100,7 +100,7 @@ public class DongGopController {
                     dongGop.setMaNguoiThu((int) model.getValueAt(selectedRowIndex, 5));
 
                     ThemDongGopJFrame frame = new ThemDongGopJFrame(dongGop);
-                    frame.setTitle("Thông Tin Tạm Trú");
+                    frame.setTitle("Thông Tin Đóng Góp");
                     frame.setResizable(false);
                     frame.setLocationRelativeTo(null);
                     frame.setVisible(true);

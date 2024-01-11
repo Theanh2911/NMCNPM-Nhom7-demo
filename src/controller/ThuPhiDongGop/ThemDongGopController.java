@@ -20,9 +20,8 @@ import service.QLThuPhiDongGop.DongGopServiceImpl;
  */
 public class ThemDongGopController {
     private JTextField jtfMaHoaDon;
-    private JTextField jtfTenNguoiDongGop;
     private JTextField jtfMaNguoiDongGop;
-    private JTextField jtfTenKhoanDongGop;
+    private JTextField jtfMaKhoanDongGop;
     private JTextField jtfSoTien;
     private JDateChooser jdcNgayDongGop;
     private JTextField jtfMaNguoiThu;
@@ -31,11 +30,10 @@ public class ThemDongGopController {
     private DongGopService dongGopService = null;
     private JLabel jlbMsg;
 
-    public ThemDongGopController(JTextField jtfMaHoaDon, JTextField jtfTenNguoiDongGop, JTextField jtfMaNguoiDongGop, JTextField jtfTenKhoanDongGop, JTextField jtfSoTien, JDateChooser jdcNgayDongGop, JTextField jtfMaNguoiThu, JButton btnSubmit, JLabel jlbMsg) {
+    public ThemDongGopController(JTextField jtfMaHoaDon, JTextField jtfMaNguoiDongGop, JTextField jtfMaKhoanDongGop, JTextField jtfSoTien, JDateChooser jdcNgayDongGop, JTextField jtfMaNguoiThu, JButton btnSubmit, JLabel jlbMsg) {
         this.jtfMaHoaDon = jtfMaHoaDon;
-        this.jtfTenNguoiDongGop = jtfTenNguoiDongGop;
         this.jtfMaNguoiDongGop = jtfMaNguoiDongGop;
-        this.jtfTenKhoanDongGop = jtfTenKhoanDongGop;
+        this.jtfMaKhoanDongGop = jtfMaKhoanDongGop;
         this.jtfSoTien = jtfSoTien;
         this.jdcNgayDongGop = jdcNgayDongGop;
         this.jtfMaNguoiThu = jtfMaNguoiThu;
@@ -46,10 +44,9 @@ public class ThemDongGopController {
 
     public void setView(DongGop dongGop){
         this.dongGop = dongGop;
-        jtfMaHoaDon.setText("#" + dongGop.getMaHoaDon());
-        jtfTenNguoiDongGop.setText(dongGop.getTenNguoiDongGop());
+        jtfMaHoaDon.setText(String.valueOf(dongGop.getMaHoaDon()));
         jtfMaNguoiDongGop.setText(String.valueOf(dongGop.getMaNguoiDongGop()));
-        jtfTenKhoanDongGop.setText(dongGop.getTenKhoanDongGop());
+        jtfMaKhoanDongGop.setText(String.valueOf(dongGop.getMaKhoanDongGop()));
         jtfSoTien.setText(String.valueOf(dongGop.getSoTien()));
         jdcNgayDongGop.setDate(dongGop.getNgayDongGop());
         jtfMaNguoiThu.setText(String.valueOf(dongGop.getMaNguoiThu()));
@@ -64,7 +61,7 @@ public class ThemDongGopController {
                 else{
                     dongGop.setMaHoaDon(Integer.parseInt(jtfMaHoaDon.getText()));
                     dongGop.setNgayDongGop((java.sql.Date) new Date(jdcNgayDongGop.getDate().getTime()));
-                    dongGop.setTenNguoiDongGop(jtfTenNguoiDongGop.getText());
+                    dongGop.setMaKhoanDongGop(Integer.parseInt(jtfMaKhoanDongGop.getText()));
                     dongGop.setMaNguoiDongGop(Integer.parseInt(jtfMaNguoiDongGop.getText()));
                     dongGop.setSoTien(Integer.parseInt(jtfSoTien.getText()));
                     dongGop.setMaNguoiThu(Integer.parseInt(jtfMaNguoiThu.getText()));
@@ -72,7 +69,7 @@ public class ThemDongGopController {
                     int lastID = dongGopService.createOrUpdate(dongGop);
                     if (lastID > 0){
 //                    dongGop.setID(lastID);
-                        jtfMaHoaDon.setText("#" + lastID);
+                        jtfMaHoaDon.setText(String.valueOf(lastID));
                         jlbMsg.setText("Thêm Mới Dữ Liệu Thành Công");
 
                     }
