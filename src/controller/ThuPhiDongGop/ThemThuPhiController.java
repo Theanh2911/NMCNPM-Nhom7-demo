@@ -44,7 +44,7 @@ public class ThemThuPhiController {
 
     public void setView(ThuPhi thuPhi){
         this.thuPhi = thuPhi;
-        jtfMaHoaDon.setText("#" + thuPhi.getMaHoaDon());
+        jtfMaHoaDon.setText(String.valueOf(thuPhi.getMaHoaDon()));
         jtfMaNguoiNop.setText(String.valueOf(thuPhi.getMaNguoiNop()));
         jtfMaKhoanThu.setText(thuPhi.getTenKhoanThu());
         jtfSoTien.setText(String.valueOf(thuPhi.getSoTien()));
@@ -65,11 +65,10 @@ public class ThemThuPhiController {
                     thuPhi.setMaNguoiNop(Integer.parseInt(jtfMaNguoiNop.getText()));
                     thuPhi.setSoTien(Integer.parseInt(jtfSoTien.getText()));
                     thuPhi.setMaNguoiThu(Integer.parseInt(jtfMaNguoiThu.getText()));
-
                     int lastID = thuPhiService.createOrUpdate(thuPhi);
                     if (lastID > 0){
 //                    thuPhi.setID(lastID);
-                        jtfMaHoaDon.setText("#" + lastID);
+                        jtfMaHoaDon.setText(String.valueOf(lastID));
                         jlbMsg.setText("Thêm Mới Dữ Liệu Thành Công");
 
                     }

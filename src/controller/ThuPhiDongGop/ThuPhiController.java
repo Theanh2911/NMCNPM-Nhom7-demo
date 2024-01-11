@@ -39,7 +39,7 @@ public class ThuPhiController {
     private JButton btnAdd;
     private JTextField jtfSearch;
     private ThuPhiService thuPhiService = null;
-    private String[] listColumn = {"Id", "Người đóng", "CCCD", "Khoản phí","Số tiền", "Ngày đóng", "Mã người thu"};
+    private String[] listColumn = {"Id", "Mã khoản phí","CCCD","Số tiền", "Ngày đóng", "Mã người thu"};
     private TableRowSorter<TableModel> rowSorter = null;
 
     public ThuPhiController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
