@@ -4,6 +4,7 @@ import view.PhatThuong.PhatThuongJFrame;
 import view.ThuPhiDongGop.QLThuPhiDongGopJFrame;
 import view.TrangChu.TrangChuJPanel;
 import view.ThongKe.ThongKeJFrame;
+import view.ThongKe.ThongKeNhanKhauJPanel;
 import view.TamTruTamVang.TamVangTamTruJFrame;
 import view.QLHoKhauNhanKhau.NhanKhauJPanel;
 import view.QLHoKhauNhanKhau.HoKhauJPanel;
@@ -67,7 +68,7 @@ public class ChuyenManHinhController {
                     node = new TrangChuJPanel();
                     break;
                 case "NhanKhau":
-                    node = new NhanKhauJPanel();
+                    node = new ThongKeNhanKhauJPanel();
                     break;
                 case "HoKhau":
                     node = new HoKhauJPanel();
