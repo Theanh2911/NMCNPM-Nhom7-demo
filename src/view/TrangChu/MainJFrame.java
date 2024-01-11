@@ -34,7 +34,7 @@ public class MainJFrame extends javax.swing.JFrame {
         listItem.add(new DanhMucBean("PhatThuong", jpnPhatThuong, jlbPhatThuong));
         listItem.add(new DanhMucBean("HoKhau", jpnHoKhau, jlbHoKhau));
         listItem.add(new DanhMucBean("QLThuPhi", jpnQLThuPhi, jlbQLThuPhi));
-        listItem.add(new DanhMucBean("ThongKe", jpnThongKe, jlbThongKe));
+        listItem.add(new DanhMucBean("LichSuThayDoi", jpnThongKe, jlbThongKe));
         controller.setEvent(listItem);
 
     }
@@ -272,7 +272,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jlbThongKe.setForeground(new java.awt.Color(255, 255, 255));
         jlbThongKe.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jlbThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-bar-chart-64.png"))); // NOI18N
-        jlbThongKe.setText(" Thống kê");
+        jlbThongKe.setText("Lịch sử thay đổi");
         jlbThongKe.setToolTipText("");
 
         javax.swing.GroupLayout jpnThongKeLayout = new javax.swing.GroupLayout(jpnThongKe);
@@ -281,7 +281,7 @@ public class MainJFrame extends javax.swing.JFrame {
             jpnThongKeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnThongKeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlbThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlbThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpnThongKeLayout.setVerticalGroup(

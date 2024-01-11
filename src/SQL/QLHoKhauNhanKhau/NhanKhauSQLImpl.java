@@ -1,15 +1,12 @@
 
 package SQL.QLHoKhauNhanKhau;
+import java.sql.*;
 import java.util.List;
 
 import SQL.DBConnect;
 import model.QLHoKhauNhanKhau.NhanKhau;
-import java.sql.Connection;
+
 import java.util.ArrayList;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Date;
 
 /**
  *
@@ -33,7 +30,6 @@ public class NhanKhauSQLImpl implements NhanKhauSQL {
                 nhanKhau.setGioiTinh(rs.getString("GioiTinh"));
                 nhanKhau.setNoiSinh(rs.getString("NoiSinh"));
                 nhanKhau.setDiaChi(rs.getString("DiaChi"));
-                
                 list.add(nhanKhau);
             }
             ps.close();
@@ -64,6 +60,15 @@ public class NhanKhauSQLImpl implements NhanKhauSQL {
                 generatedKey = rs.getInt(1);
             }
             ps.close();
+            String sql1 = "INSERT INTO lichsuthaydoi(loaiThayDoi, maViTri, noiDung, thoiGian) VALUES(?,?,?,?) ON DUPLICATE KEY UPDATE loaiThayDoi = values(loaiThayDoi),maViTri = values(maVitri), noiDung = values(noiDung), thoiGian = values(thoiGian);";
+            PreparedStatement ps1 = cons.prepareStatement(sql1, PreparedStatement.RETURN_GENERATED_KEYS);
+            ps1.setString(1, "Nhân khẩu");
+            ps1.setInt(2, nhanKhau.getID());
+            ps1.setString(3, "CreateOrUpdate nhân khẩu");
+            ps1.setTimestamp(4, new Timestamp(new java.util.Date().getTime()));
+            ps1.execute();
+            ResultSet rs1 = ps1.getGeneratedKeys();
+            ps1.close();
             cons.close();
             return generatedKey;
         } catch (Exception ex) {
