@@ -4,6 +4,9 @@
  */
 package view.ThuPhiDongGop;
 
+import controller.ThuPhiDongGop.DongGopController;
+import controller.ThuPhiDongGop.ThuPhiController;
+
 /**
  *
  * @author apple
@@ -14,7 +17,11 @@ public class ThuPhiJPanel extends javax.swing.JPanel {
      * Creates new form QLThuPhiJPanel
      */
     public ThuPhiJPanel() {
+
         initComponents();
+        ThuPhiController controller = new ThuPhiController(jpnView, btnAdd, jtfSearch);
+        controller.setDatetoTableThuPhi();
+        controller.setEvent();
     }
 
     /**

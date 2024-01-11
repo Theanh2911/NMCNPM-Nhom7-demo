@@ -1,11 +1,12 @@
-package service;
+package SQL.PhatThuong;
 
 import model.QLPhatThuong.PhatThuongLe;
 
 import java.util.List;
 
-public interface PhatThuongLeService {
+public interface PhatThuongLeSQL {
     public List<PhatThuongLe> getList();
     public int createOrUpdate(PhatThuongLe phatThuongLe);
-    public int delete(int id);
+
+    int delete(int id);
 }

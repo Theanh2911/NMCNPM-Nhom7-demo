@@ -1,5 +1,6 @@
-package SQL;
+package SQL.PhatThuong;
 
+import SQL.DBConnect;
 import model.QLPhatThuong.PhatThuongHocTap;
 
 import java.sql.Connection;

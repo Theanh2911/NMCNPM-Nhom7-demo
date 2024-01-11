@@ -39,7 +39,7 @@ public class DongGopController {
     private JButton btnAdd;
     private JTextField jtfSearch;
     private DongGopService dongGopService = null;
-    private String[] listColumn = {"Id", "Người đóng", "CCCD", "Khoản đóng góp","Số tiền", "Ngày đóng", "Mã người thu"};
+    private String[] listColumn = {"Id", "Mã khoản đóng góp","CCCD","Số tiền", "Ngày đóng", "Mã người thu"};
     private TableRowSorter<TableModel> rowSorter = null;
 
     public DongGopController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
@@ -93,12 +93,11 @@ public class DongGopController {
                     selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
                     DongGop dongGop = new DongGop();
                     dongGop.setMaHoaDon((int) model.getValueAt(selectedRowIndex, 0));
-                    dongGop.setTenNguoiDongGop((String) model.getValueAt(selectedRowIndex, 1));
+                    dongGop.setMaKhoanDongGop((int) model.getValueAt(selectedRowIndex, 1));
                     dongGop.setMaNguoiDongGop((int) model.getValueAt(selectedRowIndex, 2));
-                    dongGop.setTenKhoanDongGop((String) model.getValueAt(selectedRowIndex, 3));
-                    dongGop.setSoTien((int) model.getValueAt(selectedRowIndex, 4));
-                    dongGop.setNgayDongGop((Date) model.getValueAt(selectedRowIndex, 5));
-                    dongGop.setMaNguoiThu((int) model.getValueAt(selectedRowIndex, 6));
+                    dongGop.setSoTien((int) model.getValueAt(selectedRowIndex, 3));
+                    dongGop.setNgayDongGop((Date) model.getValueAt(selectedRowIndex, 4));
+                    dongGop.setMaNguoiThu((int) model.getValueAt(selectedRowIndex, 5));
 
                     ThemDongGopJFrame frame = new ThemDongGopJFrame(dongGop);
                     frame.setTitle("Thông Tin Tạm Trú");

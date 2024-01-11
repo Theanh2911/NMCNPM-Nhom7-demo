@@ -3,8 +3,8 @@ package controller.PhatThuong;
 
 import com.toedter.calendar.JDateChooser;
 import model.QLPhatThuong.PhatThuongLe;
-import service.PhatThuongLeService;
-import service.PhatThuongLeServiceImpl;
+import service.PhatThuong.PhatThuongLeService;
+import service.PhatThuong.PhatThuongLeServiceImpl;
 
 import javax.swing.*;
 import java.awt.*;

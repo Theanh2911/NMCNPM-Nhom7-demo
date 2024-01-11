@@ -6,8 +6,8 @@
 package controller.PhatThuong;
 
 import model.QLPhatThuong.PhatThuongHocTap;
-import service.PhatThuongHocTapService;
-import service.PhatThuongHocTapServiceImpl;
+import service.PhatThuong.PhatThuongHocTapService;
+import service.PhatThuong.PhatThuongHocTapServiceImpl;
 import utility.ClassTableModelPhatThuongHocTap;
 import view.PhatThuong.ThemPhatThuongHocTapJFrame;
 

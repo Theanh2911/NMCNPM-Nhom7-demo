@@ -6,8 +6,8 @@
 package controller.PhatThuong;
 
 import model.QLPhatThuong.PhatThuongLe;
-import service.PhatThuongLeService;
-import service.PhatThuongLeServiceImpl;
+import service.PhatThuong.PhatThuongLeService;
+import service.PhatThuong.PhatThuongLeServiceImpl;
 import utility.ClassTableModelPhatThuongLe;
 import view.PhatThuong.ThemPhatThuongLeJFrame;
 

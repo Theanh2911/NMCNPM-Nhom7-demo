@@ -253,5 +253,8 @@ VALUES
     (1,'Thưởng người tốt việc tốt',30000),
     (2,'Thưởng cho các cháu thiếu nhi 1/6',50000);
 
+INSERT INTO khoanthuphi (maKhoanThu, tenKhoanThu, soTien)
+VALUES (1, 'Phí vệ sinh',6000);
+
 
 

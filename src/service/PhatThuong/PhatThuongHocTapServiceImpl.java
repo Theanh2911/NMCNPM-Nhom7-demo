@@ -1,7 +1,7 @@
-package service;
+package service.PhatThuong;
 
-import SQL.PhatThuongHocTapSQL;
-import SQL.PhatThuongHocTapSQLIpml;
+import SQL.PhatThuong.PhatThuongHocTapSQL;
+import SQL.PhatThuong.PhatThuongHocTapSQLIpml;
 import model.QLPhatThuong.PhatThuongHocTap;
 
 import java.util.List;

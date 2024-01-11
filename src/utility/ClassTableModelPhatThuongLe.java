@@ -33,7 +33,7 @@ public class ClassTableModelPhatThuongLe {
                 o[0] = phatThuongLe.getMaPhatThuong();
                 o[1] = phatThuongLe.getMaPhanThuong();
                 o[2] = phatThuongLe.getMaNguoiNhan();
-                o[3] = phatThuongLe.getNguoiNhan();
+                o[3] = phatThuongLe.getGiaTri();
                 o[4] = phatThuongLe.getNgayNhan();
                 dtm.addRow(o);
             }

@@ -38,7 +38,7 @@ public class QLThuPhiDongGopController {
         btnQuanLyDongGop.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                chosenThongKe = "ThongKeTamTru";
+                chosenThongKe = "ThongKeDongGop";
                 root.removeAll();
                 root.setLayout(new BorderLayout());
                 root.add(new DongGopJPanel());
