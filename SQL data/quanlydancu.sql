@@ -188,43 +188,7 @@ values (1, 3, 'Pham Van Anh', '283 Khuong Trung', null, null),
        (2,4,'Le Duc Khanh', '198 Cau Giay',null, null);
 
 
-CREATE TABLE thuongle (
-    maPhatThuong INT NOT NULL,
-    idPhanThuong INT NOT NULL,
-    ngayNhan DATE NOT NULL,
-    idNguoiPhat INT NOT NULL,
-    idNguoiNhan INT NOT NULL,
-    PRIMARY KEY (maPhatThuong),
-    FOREIGN KEY (idPhanThuong) REFERENCES phanthuongle (idPhanThuong),
-    FOREIGN KEY (idNguoiNhan) REFERENCES nhankhau (ID)
-);
-
-create table phanthuongle (
-    idPhanThuong INT NOT NULL,
-    tenPhanThuong VARCHAR(255) NOT NULL,
-    giaTri INT NOT NULL,
-    PRIMARY KEY (idPhanThuong)
-);
-
-create table thuonghoctap(
-    maPhatThuong INT NOT NULL,
-    idPhanThuong INT NOT NULL,
-    idNguoiNhan INT NOT NULL,
-    ngayNhan DATE NOT NULL,
-    idNguoiPhat INT NOT NULL,
-    PRIMARY KEY (maPhatThuong),
-    FOREIGN KEY (idPhanThuong) REFERENCES phanthuonghoctap (idPhanThuong),
-    FOREIGN KEY (idNguoiNhan) REFERENCES nhankhau (ID)
-);
-
-create table phanthuonghoctap(
-    idPhanThuong INT NOT NULL,
-    loaiPhanThuong VARCHAR(255) NOT NULL,
-    giaTri INT NOT NULL,
-    PRIMARY KEY (idPhanThuong)
-);
-
-INSERT INTO thuonghoctap (maPhatThuong, idPhanThuong, ngayNhan, idNguoiPhat, idNguoiNhan)
+INSERT INTO phatthuonghoctap (maPhatThuong, idPhanThuong, ngayNhan, idNguoiPhat, idNguoiNhan)
 VALUES
     (1, 2, '2023-12-25', 1, 8),
     (2, 2, '2023-12-25', 1, 17),
@@ -244,7 +208,7 @@ VALUES
     (1,'Phần thưởng cho học sinh giỏi',100000),
     (2,'Phần thưởng cho học sinh tiên tiến',50000);
 
-INSERT INTO thuongle(maPhatThuong, idPhanThuong, ngayNhan, idNguoiPhat, idNguoiNhan)
+INSERT INTO phatthuongle(maPhatThuong, idPhanThuong, ngayNhan, idNguoiPhat, idNguoiNhan)
 VALUES
     (1,1,'2024-02-05',1,9);
 
