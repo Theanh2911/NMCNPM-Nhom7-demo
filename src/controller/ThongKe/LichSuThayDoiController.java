@@ -84,7 +84,7 @@ public class LichSuThayDoiController {
 
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.getViewport().add(table);
-        scrollPane.setPreferredSize(new Dimension(1350, 400));
+        scrollPane.setPreferredSize(new Dimension(400, 400));
         jpnView.removeAll();
         jpnView.setLayout(new BorderLayout());
         jpnView.add(scrollPane);
