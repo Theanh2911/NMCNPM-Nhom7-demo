@@ -4,7 +4,8 @@
  */
 package view.PhatThuong;
 
-import controller.PhatThuong.PhatThuongController;
+import view.TamTruTamVang.*;
+import controller.TamTruTamVang.TamTruTamVangController;
 import javax.swing.JPanel;
 
 /**
@@ -19,7 +20,7 @@ public class PhatThuongJFrame extends javax.swing.JFrame {
     public PhatThuongJFrame(JPanel root) {
 
         initComponents();
-        PhatThuongController controller = new PhatThuongController(btnThongKePhatThuongHocTap, btnThongKePhatThuongLe);
+        TamTruTamVangController controller = new TamTruTamVangController(btnThongKePhatThuongHocTap, btnThongKePhatThuongLe);
         controller.setEvent(root);
     }
 
@@ -38,7 +39,7 @@ public class PhatThuongJFrame extends javax.swing.JFrame {
         btnThongKePhatThuongHocTap = new javax.swing.JButton();
         btnThongKePhatThuongLe = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(167, 199, 231));
 
@@ -57,7 +58,7 @@ public class PhatThuongJFrame extends javax.swing.JFrame {
         btnThongKePhatThuongHocTap.setText("Thống kê phát thưởng học tập");
         btnThongKePhatThuongHocTap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnThongKeTamTruActionPerformed(evt);
+                btnThongKePhatThuongHocTapActionPerformed(evt);
             }
         });
 
@@ -67,7 +68,7 @@ public class PhatThuongJFrame extends javax.swing.JFrame {
         btnThongKePhatThuongLe.setText("Thống kê phát thưởng lễ");
         btnThongKePhatThuongLe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnThongKeTamVangActionPerformed(evt);
+                btnThongKePhatThuongLeActionPerformed(evt);
             }
         });
 
@@ -79,8 +80,8 @@ public class PhatThuongJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnThongKePhatThuongHocTap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnThongKePhatThuongLe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnThongKePhatThuongLe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnThongKePhatThuongHocTap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(283, 283, 283))
         );
         jPanel2Layout.setVerticalGroup(
@@ -126,13 +127,13 @@ public class PhatThuongJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnThongKeTamVangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKeTamVangActionPerformed
+    private void btnThongKePhatThuongLeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKePhatThuongLeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnThongKeTamVangActionPerformed
+    }//GEN-LAST:event_btnThongKePhatThuongLeActionPerformed
 
-    private void btnThongKeTamTruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKeTamTruActionPerformed
+    private void btnThongKePhatThuongHocTapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKePhatThuongHocTapActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnThongKeTamTruActionPerformed
+    }//GEN-LAST:event_btnThongKePhatThuongHocTapActionPerformed
 
     /**
      * @param args the command line arguments

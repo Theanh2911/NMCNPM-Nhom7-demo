@@ -88,9 +88,6 @@
               <Color blue="e7" green="c7" red="a7" type="rgb"/>
             </Property>
           </Properties>
-          <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Th&#xf4;ng Tin T&#x1ea1;m V&#x1eaf;ng"/>
-          </AccessibilityProperties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="NhanKhauJFrame_jPanel2"/>
           </AuxValues>
@@ -107,9 +104,9 @@
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel6" min="-2" pref="123" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" pref="155" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jtfMaNguoiNhan" min="-2" pref="274" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -121,25 +118,27 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jdcNgayKhaiBao" alignment="0" min="-2" pref="274" max="-2" attributes="0"/>
-                                          <Component id="jtfNguoiThucHien" alignment="0" min="-2" pref="274" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jtfHoTen" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
-                                          <Component id="jtfIdNhanKhau" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
-                                          <Component id="jtfIdKhaiBao" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
+                                          <Component id="jtfNguoiNhan" alignment="0" min="-2" pref="274" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                              <Component id="jtfTenPhanThuong" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
+                                              <Component id="jtfMaPhatThuong" alignment="1" min="-2" pref="274" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jdcNgayNhan" alignment="0" min="-2" pref="274" max="-2" attributes="0"/>
+                                          <Component id="jtfGiaTri" alignment="0" min="-2" pref="274" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -149,34 +148,34 @@
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jtfIdKhaiBao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfMaPhatThuong" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jtfIdNhanKhau" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfTenPhanThuong" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jtfHoTen" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="jtfNguoiNhan" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel6" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="jtfMaNguoiNhan" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel6" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" alignment="0" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="jtfGiaTri" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel3" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jdcNgayKhaiBao" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel3" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="jdcNgayNhan" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel4" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jtfNguoiThucHien" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                       <Component id="btnSubmit" min="-2" pref="42" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -193,7 +192,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="Id khai b&#xe1;o"/>
+                <Property name="text" type="java.lang.String" value="M&#xe3; ph&#xe1;t th&#x1b0;&#x1edf;ng:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
@@ -205,7 +204,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="Id nh&#xe2;n kh&#x1ea9;u"/>
+                <Property name="text" type="java.lang.String" value="T&#xea;n ph&#x1ea7;n th&#x1b0;&#x1edf;ng:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
@@ -217,7 +216,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="Ng&#xe0;y khai b&#xe1;o"/>
+                <Property name="text" type="java.lang.String" value="Ng&#xe0;y nh&#x1ead;n:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
@@ -229,7 +228,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i th&#x1ef1;c hi&#x1ec7;n"/>
+                <Property name="text" type="java.lang.String" value="Gi&#xe1; tr&#x1ecb;:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
@@ -241,43 +240,24 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="N&#x1a1;i &#x111;&#x1ebf;n"/>
+                <Property name="text" type="java.lang.String" value="ID ng&#x1b0;&#x1edd;i nh&#x1ead;n:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtfIdKhaiBao">
+            <Component class="javax.swing.JTextField" name="jtfMaPhatThuong">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtfIdNhanKhau">
+            <Component class="javax.swing.JTextField" name="jtfTenPhanThuong">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
               </Properties>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jtaNoiDen">
-                  <Properties>
-                    <Property name="columns" type="int" value="20"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Arial" size="16" style="0"/>
-                    </Property>
-                    <Property name="lineWrap" type="boolean" value="true"/>
-                    <Property name="rows" type="int" value="5"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="com.toedter.calendar.JDateChooser" name="jdcNgayKhaiBao">
+            <Component class="com.toedter.calendar.JDateChooser" name="jdcNgayNhan">
               <Properties>
                 <Property name="dateFormatString" type="java.lang.String" value="dd-MM-yyyy"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -285,7 +265,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtfNguoiThucHien">
+            <Component class="javax.swing.JTextField" name="jtfGiaTri">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
@@ -318,10 +298,17 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="H&#x1ecd; v&#xe0; T&#xea;n"/>
+                <Property name="text" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i nh&#x1ead;n:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtfHoTen">
+            <Component class="javax.swing.JTextField" name="jtfMaNguoiNhan">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="16" style="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jtfNguoiNhan">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>

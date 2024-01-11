@@ -7,6 +7,8 @@ public class PhatThuongLe {
 //    private int maNguoiPhat;
 //    private String nguoiPhat;
     private int maPhanThuong;
+    private String tenPhanThuong;
+    private int giaTri;
     private int maNguoiNhan;
     private String nguoiNhan;
     private Date ngayNhan;
@@ -17,6 +19,22 @@ public class PhatThuongLe {
 
     public void setMaPhatThuong(int maPhatThuong) {
         this.maPhatThuong = maPhatThuong;
+    }
+
+    public String getTenPhanThuong() {
+        return tenPhanThuong;
+    }
+
+    public int getGiaTri() {
+        return giaTri;
+    }
+
+    public void setTenPhanThuong(String tenPhanThuong) {
+        this.tenPhanThuong = tenPhanThuong;
+    }
+
+    public void setGiaTri(int giaTri) {
+        this.giaTri = giaTri;
     }
 
     public int getMaPhanThuong() {

@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package view.PhatThuong;
+import controller.PhatThuong.ThongKePhatThuongLeController;
 import view.TamTruTamVang.*;
 import controller.TamTruTamVang.ThongKeTamVangController;
 
@@ -18,8 +19,8 @@ public class ThongKePhatThuongLeJPanel extends javax.swing.JPanel {
     public ThongKePhatThuongLeJPanel() {
 
         initComponents();
-        ThongKeTamVangController controller = new ThongKeTamVangController(jpnView, btnAdd, jtfSearch);
-        controller.setDatetoTable4();
+        ThongKePhatThuongLeController controller = new ThongKePhatThuongLeController(jpnView, btnAdd, jtfSearch);
+        controller.setDatetoThongKePhatThuongLeTable();
         controller.setEvent();
     }
 

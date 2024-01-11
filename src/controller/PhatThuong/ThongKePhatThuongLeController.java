@@ -41,7 +41,7 @@ public class ThongKePhatThuongLeController {
         this.jtfSearch = jtfSearch;
         this.phatThuongLeService = new PhatThuongLeServiceImpl();
     }
-    public void setDatetoTable2(){
+    public void setDatetoThongKePhatThuongLeTable(){
         List<PhatThuongLe> listItem = phatThuongLeService.getList();
         DefaultTableModel model = new ClassTableModelPhatThuongLe().setTablePhatThuongLe(listItem, listColumn);
         JTable table = new JTable(model);

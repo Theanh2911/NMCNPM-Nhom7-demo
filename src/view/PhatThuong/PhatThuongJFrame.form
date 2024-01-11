@@ -86,8 +86,8 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btnThongKeTamVang" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btnThongKeTamTru" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnThongKePhatThuongLe" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnThongKePhatThuongHocTap" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="283" max="-2" attributes="0"/>
                   </Group>
@@ -99,9 +99,9 @@
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" pref="50" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnThongKeTamTru" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnThongKePhatThuongHocTap" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                      <Component id="btnThongKeTamVang" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnThongKePhatThuongLe" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="168" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -120,7 +120,7 @@
                 <Property name="text" type="java.lang.String" value="L&#x1ef1;a ch&#x1ecd;n th&#x1ed1;ng k&#xea; mong mu&#x1ed1;n"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnThongKeTamTru">
+            <Component class="javax.swing.JButton" name="btnThongKePhatThuongHocTap">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cb" green="b4" red="82" type="rgb"/>
@@ -134,10 +134,10 @@
                 <Property name="text" type="java.lang.String" value="Th&#x1ed1;ng k&#xea; ph&#xe1;t th&#x1b0;&#x1edf;ng h&#x1ecd;c t&#x1ead;p"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThongKeTamTruActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThongKePhatThuongHocTapActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnThongKeTamVang">
+            <Component class="javax.swing.JButton" name="btnThongKePhatThuongLe">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cb" green="b4" red="82" type="rgb"/>
@@ -151,7 +151,7 @@
                 <Property name="text" type="java.lang.String" value="Th&#x1ed1;ng k&#xea; ph&#xe1;t th&#x1b0;&#x1edf;ng l&#x1ec5;"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThongKeTamVangActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThongKePhatThuongLeActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

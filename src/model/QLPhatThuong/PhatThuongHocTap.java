@@ -7,9 +7,15 @@ public class PhatThuongHocTap {
 //    private int maNguoiPhat;
 //    private String nguoiPhat;
     private int maPhanThuong;
+    private String tenPhanThuong;
+    private int giaTri;
     private int maNguoiNhan;
     private String nguoiNhan;
     private Date ngayNhan;
+
+    public int getGiaTri() {
+        return giaTri;
+    }
 
     public int getMaPhatThuong() {
         return maPhatThuong;
@@ -21,6 +27,14 @@ public class PhatThuongHocTap {
 
     public int getMaPhanThuong() {
         return maPhanThuong;
+    }
+
+    public String getTenPhanThuong() {
+        return tenPhanThuong;
+    }
+
+    public void setTenPhanThuong(String tenPhanThuong) {
+        this.tenPhanThuong = tenPhanThuong;
     }
 
     public void setMaPhanThuong(int maPhanThuong) {
@@ -49,5 +63,9 @@ public class PhatThuongHocTap {
 
     public void setNgayNhan(Date ngayNhan) {
         this.ngayNhan = ngayNhan;
+    }
+
+    public void setGiaTri(int giaTri) {
+        this.giaTri = giaTri;
     }
 }

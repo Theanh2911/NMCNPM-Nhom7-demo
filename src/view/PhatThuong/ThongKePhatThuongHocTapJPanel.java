@@ -5,7 +5,7 @@
 package view.PhatThuong;
 
 import view.TamTruTamVang.*;
-import controller.TamTruTamVang.ThongKeTamTruController;
+import controller.PhatThuong.ThongKePhatThuongHocTapController;
 
 /**
  *
@@ -18,8 +18,8 @@ public class ThongKePhatThuongHocTapJPanel extends javax.swing.JPanel {
      */
     public ThongKePhatThuongHocTapJPanel() {
         initComponents();
-        ThongKeTamTruController controller = new ThongKeTamTruController(jpnView, btnAdd, jtfSearch);
-        controller.setDatetoTable2();
+        ThongKePhatThuongHocTapController controller = new ThongKePhatThuongHocTapController(jpnView, btnAdd, jtfSearch);
+        controller.setDatetoThongKePhatThuongHocTapTable();
         controller.setEvent();
     }
 

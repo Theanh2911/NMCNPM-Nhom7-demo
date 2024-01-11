@@ -41,7 +41,7 @@ public class ThongKePhatThuongHocTapController {
         this.jtfSearch = jtfSearch;
         this.phatThuongHocTapService = new PhatThuongHocTapServiceImpl();
     }
-    public void setDatetoTable2(){
+    public void setDatetoThongKePhatThuongHocTapTable(){
         List<PhatThuongHocTap> listItem = phatThuongHocTapService.getList();
         DefaultTableModel model = new ClassTableModelPhatThuongHocTap().setTablePhatThuongHocTap(listItem, listColumn);
         JTable table = new JTable(model);
