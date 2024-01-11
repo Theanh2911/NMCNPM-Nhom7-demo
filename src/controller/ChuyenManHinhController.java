@@ -1,6 +1,7 @@
 package controller;
 
 import view.PhatThuong.PhatThuongJFrame;
+import view.ThongKe.LichSuThayDoiJPanel;
 import view.ThuPhiDongGop.QLThuPhiDongGopJFrame;
 import view.TrangChu.TrangChuJPanel;
 import view.ThongKe.ThongKeJFrame;
@@ -95,12 +96,8 @@ public class ChuyenManHinhController {
                     frame2.setLocationRelativeTo(null);
                     frame2.setVisible(true);
                     break;
-                case "ThongKe":
-                    ThongKeJFrame frame = new ThongKeJFrame(root);
-                    frame.setTitle("Thông Tin Cách Ly Covid");
-                    frame.setResizable(false);
-                    frame.setLocationRelativeTo(null);
-                    frame.setVisible(true);
+                case "LichSuThayDoi":
+                    node = new LichSuThayDoiJPanel();
                     // to do: add statement and code to let user choose which type of 
                     break;
                 default:
