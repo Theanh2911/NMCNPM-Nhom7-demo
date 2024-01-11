@@ -30,7 +30,7 @@ public class ThuPhiSQLImpl implements ThuPhiSQL {
                 thuPhi.setMaHoaDon(rs.getInt("maHoaDon"));
                 thuPhi.setMaKhoanThu(rs.getInt("maKhoanThu"));
                 thuPhi.setMaNguoiNop(rs.getInt("maNguoiNop"));
-                thuPhi.setNgayDongGop(rs.getDate("ngayDong"));
+                thuPhi.setNgayDong(rs.getDate("ngayDong"));
                 thuPhi.setMaNguoiThu(rs.getInt("maNguoiThu"));
                 list.add(thuPhi);
             }
@@ -49,7 +49,7 @@ public class ThuPhiSQLImpl implements ThuPhiSQL {
     public int createOrUpdate(ThuPhi thuPhi) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "INSERT INTO ThuPhi(maHoaDon, maKhoanThu, maNguoiNop, ngayDong, maNguoiThu) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanThu = VALUES(maKhoanThu), maNguoiNop = VALUES(maNguoiNop),ngayDong = VALUES(ngayDong), maNguoiDong = VALUES(maNguoiDong);";
+            String sql = "INSERT INTO ThuPhi(maHoaDon, maKhoanThu, maNguoiNop, ngayDong, maNguoiThu) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanThu = VALUES(maKhoanThu), maNguoiNop = VALUES(maNguoiNop),ngayDong = VALUES(ngayDong), maNguoiThu = VALUES(maNguoiThu);";
             PreparedStatement ps = cons.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setInt(1, thuPhi.getMaHoaDon());
             ps.setInt(2, thuPhi.getMaKhoanThu());

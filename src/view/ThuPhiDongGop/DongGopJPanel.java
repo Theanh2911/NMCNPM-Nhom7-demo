@@ -4,6 +4,9 @@
  */
 package view.ThuPhiDongGop;
 
+import controller.TamTruTamVang.ThongKeTamTruController;
+import controller.ThuPhiDongGop.DongGopController;
+
 /**
  *
  * @author apple
@@ -16,6 +19,9 @@ public class DongGopJPanel extends javax.swing.JPanel {
     public DongGopJPanel() {
 
         initComponents();
+        DongGopController controller = new DongGopController(jpnView, btnAdd, jtfSearch);
+        controller.setDatetoTableDongGop();
+        controller.setEvent();
 
     }
 

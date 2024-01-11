@@ -24,7 +24,6 @@ public class Main {
         catch (IllegalAccessException e) {
            // handle exception
         }
-        
         DangNhapJDialog dialog = new DangNhapJDialog(null, true);
         dialog.setTitle("Đăng Nhập Hệ Thống");
         dialog.setLocationRelativeTo(null);

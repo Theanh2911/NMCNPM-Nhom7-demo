@@ -31,7 +31,7 @@ public class DongGopSQLImpl implements DongGopSQL {
                 dongGop.setMaKhoanDongGop(rs.getInt("maKhoanDongGop"));
                 dongGop.setMaNguoiDongGop(rs.getInt("maNguoiDongGop"));
                 dongGop.setSoTien(rs.getInt("soTien"));
-                dongGop.setNgayDongGop(rs.getDate("ngayDong"));
+                dongGop.setNgayDongGop(rs.getDate("ngayDongGop"));
                 dongGop.setMaNguoiThu(rs.getInt("maNguoiThu"));
                 list.add(dongGop);
             }
@@ -50,12 +50,12 @@ public class DongGopSQLImpl implements DongGopSQL {
     public int createOrUpdate(DongGop dongGop) {
         try {
             Connection cons = DBConnect.getConnection();
-            String sql = "INSERT INTO DongGop(maHoaDon, maKhoanThu, maNguoiNop, ngayDong, maNguoiThu) VALUES(?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanThu = VALUES(maKhoanThu), maNguoiNop = VALUES(maNguoiNop),ngayDong = VALUES(ngayDong), maNguoiDong = VALUES(maNguoiDong);";
+            String sql = "INSERT INTO DongGop(maHoaDon, maKhoanDongGop, maNguoiDongGop, soTien, ngayDongGop, maNguoiThu) VALUES(?, ?, ?, ?, ?,?) ON DUPLICATE KEY UPDATE maHoaDon = VALUES(maHoaDon),maKhoanDongGop = VALUES(maKhoanDongGop), maNguoiDongGop = VALUES(maNguoiDongGop), soTien = VALUES(soTien), ngayDong = VALUES(ngayDongGop), maNguoiThu = VALUES(maNguoiThu);";
             PreparedStatement ps = cons.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setInt(1, dongGop.getMaHoaDon());
-            ps.setInt(2, dongGop.getMaKhoanThu());
-            ps.setInt(3, dongGop.getMaNguoiNop());
-            ps.setDate(4, (java.sql.Date) new Date(dongGop.getNgayDong().getTime()));
+            ps.setInt(2, dongGop.getMaKhoanDongGop());
+            ps.setInt(3, dongGop.getMaNguoiDongGop());
+            ps.setDate(4, (java.sql.Date) new Date(dongGop.getNgayDongGop().getTime()));
             ps.setInt(5, dongGop.getMaNguoiThu());
             ps.execute();
             ResultSet rs = ps.getGeneratedKeys();

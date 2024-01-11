@@ -90,8 +90,6 @@ public class NhanKhauController {
                 btnSubmit.setBackground(new Color(100, 221, 23));
 
             }
-            
-            
         });
     }
 }
